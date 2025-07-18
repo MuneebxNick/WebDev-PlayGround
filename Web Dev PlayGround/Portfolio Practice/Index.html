@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">YourName</a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <p class="greeting">Hello, I'm</p>
+                <h1>Your Name Here</h1>
+                <p class="tagline">A passionate <span class="highlight">Web Developer</span></p>
+                <a href="#contact" class="btn-primary">Get In Touch</a>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/400" alt="Your Profile Picture">
+                </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi, I'm [Your Name], a [Your Profession/Role] with a passion for creating engaging and user-friendly web experiences. I love bringing ideas to life through code and continuously learning new technologies.</p>
+                    <p>My journey in web development started [mention when/how you started, e.g., "a few years ago with a fascination for how websites work"]. Since then, I've worked on a variety of projects, from [mention types of projects, e.g., "small business websites to complex web applications"].</p>
+                    <p>In my free time, I enjoy [mention hobbies or interests, e.g., "exploring new coding challenges, reading tech blogs, and hiking"]. I'm always open to new opportunities and collaborations!</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/300" alt="About Me Image">
+                    </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js-square"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git</h3>
+                </div>
+                </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                    <p>A brief description of Project 1, highlighting the technologies used and its purpose.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn-secondary">Live Demo</a>
+                        <a href="#" target="_blank" class="btn-secondary">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                    <h3>Project Title 2</h3>
+                    <p>A brief description of Project 2, highlighting the technologies used and its purpose.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn-secondary">Live Demo</a>
+                        <a href="#" target="_blank" class="btn-secondary">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                    <h3>Project Title 3</h3>
+                    <p>A brief description of Project 3, highlighting the technologies used and its purpose.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn-secondary">Live Demo</a>
+                        <a href="#" target="_blank" class="btn-secondary">GitHub Repo</a>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <p>Have a question or want to work together? Feel free to reach out!</p>
+                <form class="contact-form" action="YOUR_FORM_SUBMISSION_SERVICE_URL" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
