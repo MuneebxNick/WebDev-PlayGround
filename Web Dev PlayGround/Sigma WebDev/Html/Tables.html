@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<style>
+    td {
+        border: 2px solid black;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <table style="border: 2px solid black;">
+        <thead>
+            <caption>Employee Details</caption>
+            <tr>
+                <!-- this is used to create new row -->
+                <!-- rowspan and colspan is used in td -->
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Fav Language</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ali</td>
+                <td rowspan="3">Software Engineer</td>
+                <td>JavaScript</td>
+            </tr>
+            <tr>
+                <td>Ahmed</td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>Hassan</td>
+                <td>C++</td>
+            </tr>
+            <tr>
+                <td>Muneeb</td>
+                <td>Programmer</td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td>Nick</td>
+                <td rowspan="2">Software Engineer</td>
+                <td rowspan="2">Java</td>
+            </tr>
+            <tr>
+                <td>Sam</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Employees: 6</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
