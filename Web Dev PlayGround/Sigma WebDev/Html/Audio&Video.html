@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio & Video in - HTML</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    audio, video {
+        display: block;
+        margin: 10px 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+    }
+
+    svg {
+        display: block;
+        margin-top: 10px;
+    }
+    p {
+        margin: 10px 0;
+    }
+    code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+    /* Additional styles for better readability */
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+    p {
+        font-size: 1em;
+        color: #555;
+    }
+    code {
+        font-family: monospace;
+        color: #d63384;
+    }
+    /* Style for audio and video controls */
+    audio, video {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    /* Style for images */
+    img {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    /* Style for iframes */
+    iframe {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    /* Style for SVG elements */
+    svg {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    /* Style for paragraphs */
+    p {
+        margin-bottom: 15px;
+        color: #333;
+    }
+    /* Style for code elements */
+    code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-family: monospace;
+        color: #d63384;
+    }
+</style>
+
+<body>
+    <!-- Now We will learn about Audio and Video & Media in HTML. -->
+    <h1>Audio & Video in HTML</h1>
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <h2>Video</h2>
+    <video width="320" height="240" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h2>Media</h2>
+    <!-- svg img iframe  -->
+    <img src="https://images.pexels.com/photos/8979918/pexels-photo-8979918.jpeg" alt="Girl image.png" width="300" height="200">   
+    <iframe src="https://www.pinterest.com/ideas" title="Pinterest for Idea"></iframe>
+    <svg width="100" height="100">
+        <rect width="100" height="100" fill="blue" />
+        <circle cx="50" cy="50" r="40" fill="red" />
+        <text x="50" y="55" font-size="20" text-anchor="middle" fill="white">SVG</text>
+    </svg>
+    <p>Media elements like SVG, images, and iframes can be embedded in HTML to enhance the content.</p>
+    <p>Audio and video elements allow for multimedia content to be included in web pages.</p>
+    <p>Use the <code>controls</code> attribute to provide playback controls for audio and video elements.</p>
+    <p>Ensure that the media files are accessible and compatible with different browsers.</p>
+    <p>For audio, you can use the <code>source</code> element to specify different formats for better compatibility.</p>
+    <p>For video, you can also use the <code>source</code> element to provide multiple formats.</p>
+    <p>Always provide alternative text for images and fallback content for audio and video elements to ensure accessibility.</p>
+    <p>Use the <code>width</code> and <code>height</code> attributes to control the size of media elements.</p>
+    <p>Remember to test your media elements across different devices and browsers to ensure they work as expected.</p>
+    <p>Use the <code>autoplay</code>, <code>loop</code>, and <code>muted</code> attributes to control media playback behavior.</p>
+    <p>Consider using the <code>preload</code> attribute to specify how the browser should load the media file.</p>
+    <p>Use the <code>poster</code> attribute for video elements to display a placeholder image before the video plays.</p>
+    <p>For audio, you can use the <code>loop</code> attribute to make the audio play continuously.</p>
+    <p>Use the <code>crossorigin</code> attribute for media elements to handle cross-origin requests.</p>
+    <p>Always test your media elements to ensure they are functioning correctly and providing a good user experience.</p>
+    <p>Remember to optimize media files for web use to reduce loading times and improve performance.</p>
+    <p>Keep in mind that not all browsers support all media formats, so providing multiple formats is a good practice.</p>
+    <p>Use the <code>media</code> attribute in the <code>link</code> tag to specify media queries for responsive design.</p>
+    <p>Use the <code>type</code> attribute in the <code>source</code> element to specify the media type for better compatibility.</p>
+    <p>Consider using the <code>playsinline</code> attribute for video elements to allow inline playback on mobile devices.</p>
+    <p>Use the <code>download</code> attribute in the <code>a</code> tag to allow users to download media files directly.</p>
+    <p>Remember to provide clear instructions for users on how to interact with media elements.</p>
+    <p>Use the <code>aria-label</code> attribute to provide accessible labels for media elements.</p>
+    <p>Consider using the <code>poster</code> attribute for video elements to provide a preview image before playback.</p>
+    <p>Use the <code>muted</code> attribute for audio elements to start playback without sound, if desired.</p>
+    <p>Always ensure that media elements are responsive and adapt to different screen sizes.</p>
+    <p>Use the <code>controlsList</code> attribute to specify which controls should be displayed for audio and video elements.</p>
+    <p>Consider using the <code>srcset</code> attribute for images to provide different resolutions for responsive design.</p>
+    <p>Always provide a fallback option for users who may not have access to certain media formats.</p>
+    <p>Use CSS to style media elements and control their appearance on the page.</p>
+    <p>Consider using JavaScript to enhance media functionality, such as creating custom controls or handling events.</p>
+</body>
+
+</html>

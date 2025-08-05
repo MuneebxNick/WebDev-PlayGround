@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Tags</title>
+</head>
+
+<body>
+    <h1>Semantic Tags</h1>
+    <p>Semantic tags in HTML provide meaning to the web content, making it easier for browsers and search engines tounderstand the structure and purpose of the content.</p>
+    semantic vs non semantic examples 
+    <p>Semantic tags help improve accessibility and SEO by clearly defining the roles of different parts of a webpage.</p>
+    <p>Non-semantic tags, on the other hand, do not convey any meaning about their content. They are used purely for styling or layout purposes.</p>
+    <h2>Semantic vs Non-Semantic Tags</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Semantic Tags</th>
+                <th>Non-Semantic Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;header&gt;</code></td>
+                <td><code>&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;nav&gt;</code></td>
+                <td><code>&lt;span&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;main&gt;</code></td>
+                <td><code>&lt;section&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;article&gt;</code></td>
+                <td><code>&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;footer&gt;</code></td>
+                <td><code>&lt;footer&gt;</code> (when used without context)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>In the table above, semantic tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;article&gt;</code> provide clear meaning about their content, while non-semantic tags like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> do not convey any specific meaning.</p>
+    
+    <h2>Common Semantic Tags</h2>
+    <ul>
+        <li><code>&lt;header&gt;</code>: Represents the header section of a document or section.</li>
+        <li><code>&lt;nav&gt;</code>: Defines a navigation section for links.</li>
+        <li><code>&lt;main&gt;</code>: Represents the main content of the document.</li>
+        <li><code>&lt;article&gt;</code>: Represents a self-contained piece of content that could stand alone.</li>
+        <li><code>&lt;section&gt;</code>: Defines a thematic grouping of content, typically with a heading.</li>
+        <li><code>&lt;aside&gt;</code>: Represents content that is tangentially related to the main content.</li>
+        <li><code>&lt;footer&gt;</code>: Represents the footer section of a document or section.</li>
+        <li><code>&lt;figure&gt;</code>: Represents self-contained content, often with a caption.</li>
+        <li><code>&lt;figcaption&gt;</code>: Provides a caption for the content of a <code>&lt;figure&gt;</code>.</li>
+        <li><code>&lt;time&gt;</code>: Represents a specific time or date.</li>
+        <li><code>&lt;address&gt;</code>: Represents contact information for the author or owner of a document or section.</li>
+        <li><code>&lt;mark&gt;</code>: Represents highlighted text.</li>
+        <li><code>&lt;blockquote&gt;</code>: Represents a section that is quoted from another source.</li>
+        <li><code>&lt;cite&gt;</code>: Represents the title of a work or a reference to a source.</li>
+        <li><code>&lt;code&gt;</code>: Represents a fragment of computer code.</li>
+        <li><code>&lt;pre&gt;</code>: Represents preformatted text, preserving whitespace and line breaks.</li>
+        <li><code>&lt;details&gt;</code>: Represents a disclosure widget from which the user can obtain additional information or controls.</li>
+        <li><code>&lt;summary&gt;</code>: Represents a summary or heading for the content of a <code>&lt;details&gt;</code> element.</li>
+        <li><code>&lt;dialog&gt;</code>: Represents a dialog box or other interactive component.</li>
+        <li><code>&lt;progress&gt;</code>: Represents the progress of a task.</li>
+        <li><code>&lt;meter&gt;</code>: Represents a scalar measurement within a known range, or a fractional value.</li>
+        <li><code>&lt;time&gt;</code>: Represents a specific time or date.</li>
+        <li><code>&lt;template&gt;</code>: Represents a template that is not rendered when the page loads but can be instantiated later using JavaScript.</li>
+    </ul>
+    <h2>Example Usage</h2>
+    <pre><code>&lt;header&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Article Title&lt;/h2&gt;
+        &lt;p&gt;This is the content of the article.&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;aside&gt;
+        &lt;h3&gt;Related Links&lt;/h3&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#link1&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#link2&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/aside&gt;
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+        <address>
+            Contact us at: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a>
+        </address>
+    </footer>
+
+</body>
+
+</html>
