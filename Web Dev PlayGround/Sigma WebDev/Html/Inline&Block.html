@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline & Block Elements in Html</title>
+</head>
+
+<body>
+    <!-- inline elements :: are those which do not start on a new line and only take up as much width as necessary. Examples include `<span>`, `<a>`, `<strong>`, and `<em>`. -->
+    <h1>Inline Elements</h1>
+    <p>This is a <span style="color: red; background: chartreuse;">red</span> inline element.</p>
+    <p>Here is a <a href="https://www.example.com" target="_blank">link</a> to an example website.</p>
+    <p>This is a <strong>strong</strong> inline element and this is an <em>emphasized</em> inline element.</p>
+    <p>Inline elements can be styled with CSS, like this <span style="color: blue;">blue text</span>.</p>
+    <p>Inline elements can also contain other inline elements, like this <span style="color: green;">green <strong>strong</strong> text</span>.</p>
+    <p>Inline elements do not disrupt the flow of text, allowing for a seamless reading experience.</p>
+    <h1>Block Elements</h1>
+    <!-- block elements :: are those which start on a new line and take up the full width available. Examples include `<div>`, `<p>`, `<h1>`, `<ul>`, and `<ol>`. -->
+    <div style="background-color: lightgray; padding: 10px;">
+        <h2>Block Element Example</h2>
+        <p>This is a block element. It starts on a new line and takes up the full width available.</p>
+        <p>Block elements can contain other block elements, like this <strong>strong</strong> text inside a paragraph.</p>
+        <ul>
+            <li>Block elements can also be used to create lists.</li>
+            <li>This is another item in the list.</li>
+        </ul>
+        <p>Block elements can be styled with CSS, like this <span style="color: purple;">purple text</span> inside a block element.</p>
+        <p>Block elements are useful for structuring content on a webpage, allowing for clear separation of sections.</p>
+    </div>
+    <!-- you can set inline element to block element by using css property `display: block;` like this -->
+    <p style="display: block; background-color: yellow; padding: 10px;">
+        This is an inline element styled as a block element using CSS. It starts on a new line and takes up the full width available.
+    </p>
+    <!-- you can set block element to inline element by using css property `display: inline;` like this -->
+    <div style="display: inline; background-color: lightblue; padding: 10px;">
+        This is a block element styled as an inline element using CSS. It does not start on a new line and only takes up as much width as necessary.
+    </div>
+    <p>Understanding the difference between inline and block elements is crucial for effective web design and layout.</p>
+    <p>By using inline and block elements appropriately, you can create a well-structured and visually appealing webpage.</p>
+    <p>Experiment with different styles and layouts to see how inline and block elements interact with each other.</p>
+    <p>Remember, inline elements are great for small pieces of content, while block elements are ideal for larger sections of text or content.</p>
+    <p>Happy coding!</p>
+</body>
+
+</html>
