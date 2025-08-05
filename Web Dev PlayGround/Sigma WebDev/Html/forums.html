@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forums & Input Tags</title>
+</head>
+
+<body>
+    <h1>Form to Apply to TA At Uni</h1>
+    <form action="post">
+        <!-- get request : just tell the server or hit the server  -->
+        <!-- post request : send data to the server -->
+        <div>
+            <label for="UserName">UserName</label>
+            <input type="text" id="UserName" placeholder="Enter Your UserName" name="UserName" required>
+        </div>
+        <div>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+        </div>
+        <div>
+            <label for="check">Subscribe to Newsletter</label>
+            <input type="checkbox" name="subscribe" id="check" value="yes">
+        </div>
+        <div>
+            <label for="comment">Enter Your Comment Here</label><br>
+            <textarea name="comment" id="comment" rows="10" cols="50"></textarea>
+        </div>
+        <div>
+            <label for="#">Select fruits</label>
+            <select name="fruits" id="#">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="orange">Orange</option>
+                <option value="grape">Grape</option>
+                <option value="mango">Mango</option>
+            </select>
+        </div>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
