@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal vs Externel CSS</title>
+</head>
+<!-- <style>
+    body {
+        background-color: lightblue;
+    }
+
+    h1 {
+        color: navy;
+        font-family: Arial, sans-serif;
+    }
+
+    p {
+        color: darkgreen;
+        font-size: 20px;
+    }
+
+    .highlight {
+        background-color: yellow;
+        font-weight: bold;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 14px;
+        color: gray;
+    }
+</style> -->
+<link rel="stylesheet" href="styles.css">
+<body>
+    <h1>CSS - & Its Types</h1>
+    <h2>Internal CSS</h2>
+    <p>This is an example of internal CSS. The styles are defined within the <code>&lt;style&gt;</code> tag in the head
+        section.</p>
+    <p class="highlight">This paragraph is highlighted using a class defined in the internal CSS.</p>
+    <h2>External CSS</h2>
+    <p>This is an example of external CSS. The styles are defined in a separate file called <code>styles.css</code>.</p>
+    <p class="footer">This is a footer styled with external CSS.</p>
+    <h2>Inline CSS</h2>
+    <p style="color: red; font-weight: bold;">This paragraph uses inline CSS to apply styles directly to the element.
+    </p>
+    <p>Inline CSS is applied using the <code>style</code> attribute within the HTML element.</p>
+    <h2>Conclusion</h2>
+    <p>Using CSS, whether internal, external, or inline, allows you to style your HTML documents effectively. Internal
+        CSS is useful for single-page styles, external CSS is great for maintaining styles across multiple pages, and
+        inline CSS is quick for one-off styles.</p>
+    <p>Check the console for a message and click the footer to see an alert.</p>
+    <p>Remember to link the external CSS file correctly in your HTML for it to work.</p>
+    <p>For more information on CSS, visit the <a href="https://www.w3schools.com/css/">W3Schools CSS Tutorial</a>.</p>
+    <p>Happy coding!</p>
+    <p>Note: Ensure that the <code>styles.css</code> file is in the same directory as this HTML file for the external
+        CSS to apply correctly.</p>
+    <footer class="footer">
+        &copy; 2023 CSS Example. All rights reserved.
+    </footer>
+    <script>
+        console.log("This is a simple script to demonstrate JavaScript in HTML.");
+        document.querySelector('.footer').addEventListener('click', function () {
+            alert('Footer clicked!');
+        });
+    </script>
+</body>
+
+</html>
