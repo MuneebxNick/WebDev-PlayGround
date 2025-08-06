@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box1{
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+}
+.box2{
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+div p{
+    color: white;
+    background-color: blue;
+}
+div p:first-child{
+    background-color: yellow;
+    color: red;
+}
