@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color - CSS</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        color: #252525;
+    }
+
+    h1,
+    h2 {
+        color: #2b5988;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    pre {
+        background-color: #d8d8d8;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    code {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    footer {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.9em;
+        color: #777;
+    }
+</style>
+
+<body>
+    <h1>All About Color in CSS</h1>
+    <p>CSS provides a variety of ways to specify colors for text, backgrounds, borders, and other elements. Here are
+        some common methods:</p>
+    <h2>Color Formats</h2>
+    <ul>
+        <li><strong>Hexadecimal:</strong> Colors can be specified using a hex code, such as <code>#ff5733</code>.</li>
+        <li><strong>RGB:</strong> Colors can be defined using the RGB model, e.g., <code>rgb(255, 87, 51)</code>.</li>
+        <li><strong>RGBA:</strong> Similar to RGB but includes an alpha channel for transparency, e.g.,
+            <code>rgba(255, 87, 51, 0.5)</code>.
+        </li>
+        <li><strong>HSL:</strong> Colors can also be specified using the HSL model, e.g.,
+            <code>hsl(9, 100%, 60%)</code>.
+        </li>
+        <li><strong>HSLA:</strong> Like HSL but with an alpha channel for transparency, e.g.,
+            <code>hsla(9, 100%, 60%, 0.5)</code>.
+        </li>
+        <li><strong>Named Colors:</strong> CSS supports a set of named colors like <code>red</code>, <code>blue</code>,
+            etc.</li>
+    </ul>
+    <h2>Using Colors in CSS</h2>
+    <p>Colors can be applied to various CSS properties:</p>
+    <ul>
+        <li><strong>color:</strong> Sets the text color of an element.</li>
+        <li><strong>background-color:</strong> Sets the background color of an element.</li>
+        <li><strong>border-color:</strong> Sets the color of an element's border.</li>
+        <li><strong>outline-color:</strong> Sets the color of an element's outline.</li>
+        <li><strong>box-shadow:</strong> Can include color to create shadows around elements.</li>
+        <li><strong>text-shadow:</strong> Adds shadow effects to text, which can include color.</li>
+    </ul>
+    <h2>Example Usage</h2>
+    <pre><code>
+        /* Example CSS */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+h1 {
+    color: rgb(255, 87, 51);
+}
+p {
+    color: rgba(0, 0, 0, 0.8);
+}
+h2 {
+    color: hsl(210, 50%, 50%);
+}
+</code></pre>
+    <h2>Conclusion</h2>
+    <p>Understanding how to use colors effectively in CSS can greatly enhance the visual appeal of your web pages.
+        Experiment with different color formats and combinations to find what works best for your design.</p>
+</body>
+
+</html>
