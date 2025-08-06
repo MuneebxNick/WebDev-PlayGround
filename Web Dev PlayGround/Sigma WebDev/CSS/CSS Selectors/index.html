@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Selectors</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    code {
+        background-color: #eaeaea;
+        padding: 2px 4px;
+        border-radius: 4px;
+    }
+
+    pre {
+        background-color: #eaeaea;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    li {
+        margin-bottom: 5px;
+    }
+    h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 1.5em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    ul li {
+        margin-bottom: 5px;
+    }
+
+    ul li code {
+        background-color: #dcdcdc;
+        padding: 2px 4px;
+        border-radius: 4px;
+    }
+    pre code {
+        background-color: #dcdcdc;
+        padding: 10px;
+        border-radius: 4px;
+        display: block;
+        overflow-x: auto;
+    }
+    pre {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+    pre code {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+        display: block;
+        overflow-x: auto;
+    }
+
+</style>
+<body>
+    <h1>CSS Selectors</h1>
+    <p>CSS selectors are patterns used to select the elements you want to style. They can be simple or complex, allowing
+        you to target specific elements based on their type, class, ID, attributes, and more. Here are some common CSS
+        selectors:</p>
+    with defination
+    <h2>Common CSS Selectors</h2>
+
+    <ul>
+        <li>Universal Selector: <code>*</code></li>
+        <li>Type Selector: <code>div</code></li>
+        <li>Class Selector: <code>.className</code></li>
+        <li>ID Selector: <code>#idName</code></li>
+        <li>Attribute Selector: <code>[attribute]</code></li>
+        <li>Pseudo-class Selector: <code>:hover</code></li>
+        <li>Pseudo-element Selector: <code>::before</code></li>
+        <li>Descendant Selector: <code>div p</code></li>
+        <li>Child Selector: <code>div > p</code></li>
+        <li>Adjacent Sibling Selector: <code>h1 + p</code></li>
+        <li>General Sibling Selector: <code>h1 ~ p</code></li>
+        <li>Group Selector: <code>h1, h2, h3</code></li>
+        <li>Attribute Selector with Value: <code>[type="text"]</code></li>
+        <li>Attribute Selector with Partial Match: <code>[class^="btn-"]</code></li>
+        <li>Attribute Selector with Substring Match: <code>[class*="btn"]</code></li>
+        <li>Attribute Selector with End Match: <code>[class$="-active"]</code></li>
+        <li>Negation Pseudo-class: <code>:not(.className)</code></li>
+        <li>First Child Selector: <code>:first-child</code></li>
+        <li>Last Child Selector: <code>:last-child</code></li>
+        <li>Nth Child Selector: <code>:nth-child(2n)</code></li>
+        <li>Nth Last Child Selector: <code>:nth-last-child(2n)</code></li>
+        <li>First of Type Selector: <code>:first-of-type</code></li>
+        <li>Last of Type Selector: <code>:last-of-type</code></li>
+        <li>Nth of Type Selector: <code>:nth-of-type(2n)</code></li>
+        <li>Only Child Selector: <code>:only-child</code></li>
+        <li>Only of Type Selector: <code>:only-of-type</code></li>
+        <li>Empty Selector: <code>:empty</code></li>
+        <li>Enabled Selector: <code>:enabled</code></li>
+        <li>Disabled Selector: <code>:disabled</code></li>
+        <li>Checked Selector: <code>:checked</code></li>
+        <li>Required Selector: <code>:required</code></li>
+        <li>Optional Selector: <code>:optional</code></li>
+        <li>Valid Selector: <code>:valid</code></li>
+        <li>Invalid Selector: <code>:invalid</code></li>
+        <li>Focus Selector: <code>:focus</code></li>
+    </ul>
+    <p>These selectors can be combined and used in various ways to create powerful and specific styles for your web
+        pages.</p>
+    <h2>Example Usage</h2>
+    <pre><code>
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Type Selector */
+div {
+    background-color: lightblue;
+}
+/* Class Selector */
+.className {
+    color: red;
+}
+/* ID Selector */
+#idName {
+    font-size: 20px;
+}
+/* Attribute Selector */
+[attribute] {
+    border: 1px solid black;
+}
+/* Pseudo-class Selector */
+a:hover {
+    text-decoration: underline;
+}
+/* Pseudo-element Selector */
+a::before {
+    content: "Link: ";
+}
+/* Descendant Selector */
+div p {
+    color: green;
+}
+/* Child Selector */
+div > p {
+    font-weight: bold;
+}
+/* Adjacent Sibling Selector */
+h1 + p {
+    margin-top: 10px;
+}
+/* General Sibling Selector */
+h1 ~ p {
+    color: gray;
+}
+/* Group Selector */
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+}
+/* Attribute Selector with Value */
+[type="text"] {
+    background-color: yellow;
+}
+/* Attribute Selector with Partial Match */
+[class^="btn-"] {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+}
+/* Attribute Selector with Substring Match */
+[class*="btn"] {
+    border-radius: 5px;
+}
+/* Attribute Selector with End Match */
+[class$="-active"] {
+    background-color: green;
+}
+/* Negation Pseudo-class */
+:not(.className) {
+    opacity: 0.5;
+}
+/* First Child Selector */
+div:first-child {
+    border: 2px solid red;
+}
+/* Last Child Selector */
+div:last-child {
+    border: 2px solid blue;
+}
+/* Nth Child Selector */
+
+div:nth-child(2n) {
+    background-color: lightgray;
+}
+/* Nth Last Child Selector */
+div:nth-last-child(2n) {
+    background-color: lightcoral;
+}
+/* First of Type Selector */
+div:first-of-type {
+    font-style: italic;
+}
+/* Last of Type Selector */
+div:last-of-type {
+    font-weight: bold;
+}
+/* Nth of Type Selector */
+div:nth-of-type(2n) {
+    background-color: lightgreen;
+}
+/* Only Child Selector */
+div:only-child {
+    padding: 20px;
+    background-color: lightyellow;
+}
+/* Only of Type Selector */
+div:only-of-type {
+    border: 1px solid black;
+}
+/* Empty Selector */
+div:empty {
+    display: none;
+}
+/* Enabled Selector */
+input:enabled {
+    background-color: white;
+}
+/* Disabled Selector */
+input:disabled {
+    background-color: lightgray;
+}
+/* Checked Selector */
+input:checked {
+    background-color: lightblue;
+}
+/* Required Selector */
+input:required {
+    border: 2px solid red;
+}
+/* Optional Selector */
+input:optional {
+    border: 2px solid green;
+}
+/* Valid Selector */
+input:valid {
+    border: 2px solid green;
+}
+/* Invalid Selector */
+input:invalid {
+    border: 2px solid red;
+}
+/* Focus Selector */
+input:focus {
+    outline: 2px solid blue;
+}
+    </code></pre>
+    <p>These examples demonstrate how to use various CSS selectors to style HTML elements effectively.</p>
+    <h2>Conclusion</h2>
+    <p>CSS selectors are powerful tools that allow you to target and style specific elements on your web pages. By
+        understanding and using these selectors, you can create visually appealing and well-structured designs.</p>
+    <h2>Further Reading</h2>
+    <p>For more information on CSS selectors, you can refer to the following resources:</p>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">MDN Web Docs - CSS Selectors</a>
+        </li>
+        <li><a href="https://www.w3schools.com/cssref/css_selectors.asp">W3Schools - CSS Selectors Reference</a></li>
+        <li><a href="https://css-tricks.com/almanac/selectors/">CSS-Tricks - CSS Selectors</a></li>
+        <li><a href="https://www.freecodecamp.org/news/css-selectors-explained/">FreeCodeCamp - CSS Selectors
+                Explained</a></li>
+        <li><a href="https://www.smashingmagazine.com/2018/01/css-selectors/">Smashing Magazine - CSS Selectors</a></li>
+        <li><a href="https://www.cssreference.io/selectors/">CSS Reference - Selectors</a></li>
+        <li><a href="https://www.tutorialspoint.com/css/css_selectors.htm">TutorialsPoint - CSS Selectors</a></li>
+        <li><a href="https://www.javatpoint.com/css-selectors">JavaTpoint - CSS Selectors</a></li>
+        <li><a href="https://www.geeksforgeeks.org/css-selectors/">GeeksforGeeks - CSS Selectors</a></li>
+        <li><a href="https://www.w3.org/TR/selectors-3/">W3C - Selectors Level 3</a></li>
+        <li><a href="https://www.w3.org/TR/selectors-4/">W3C - Selectors Level 4</a></li>
+        <li><a href="https://www.csszengarden.com/">CSS Zen Garden - A showcase of CSS design</a></li>
+        <li><a href="https://www.cssdesignawards.com/">CSS Design Awards - A showcase of innovative CSS designs</a></li>
+        <li><a href="https://www.awwwards.com/">Awwwards - A showcase of the best web design and development</a></li>
+        <li><a href="https://www.css-tricks.com/snippets/css/a-guide-to-css-selectors/">CSS-Tricks - A Guide to CSS
+                Selectors</a></li>
+        <li><a href="https://www.freecodecamp.org/news/css-selectors-cheat-sheet/">FreeCodeCamp - CSS Selectors Cheat
+                Sheet</a></li>
+    </ul>
+    <p>These resources provide in-depth explanations, examples, and best practices for using CSS selectors effectively in
+        your web development projects.</p>
+
+</body>
+
+</html>
