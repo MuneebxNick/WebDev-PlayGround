@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity & Cascade</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+    h1, h2, h3 {
+        color: #333;
+    }
+    p {
+        color: #555;
+    }
+    ul, ol {
+        margin-left: 20px;
+    }
+    pre {
+        background-color: #eaeaea;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    code {
+        background-color: #f9f9f9;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+    h1 {
+        color: #2c3e50;
+    }
+    h2 {
+        color: #34495e;
+    }
+    h3 {
+        color: #7f8c8d;
+    }
+    p, li {
+        color: #2c3e50;
+    }
+    ul, ol {
+        color: #34495e;
+    }
+    pre {
+        color: #2c3e50;
+        font-family: 'Courier New', Courier, monospace;
+    }
+</style>
+<body>
+    <h1>CSS Specificity & Cascade Algorithm</h1>
+    <p>Understanding how CSS specificity and the cascade work is crucial for effective styling in web development.</p>
+    <h2>What is Specificity?</h2>
+    <p>Specificity is a ranking system that browsers use to determine which CSS rule applies when multiple rules could apply to the same element.</p>
+    <h3>Specificity Hierarchy</h3>
+    <ul>
+        <li>Inline styles (highest specificity)</li>
+        <li>ID selectors</li>
+        <li>Class selectors, attributes selectors, and pseudo-classes</li>
+        <li>Element selectors and pseudo-elements (lowest specificity)</li>
+    </ul>
+    <h2>Calculating Specificity</h2>
+    <p>Specificity is calculated using a four-part value:</p>
+    <ul>
+        <li>Inline styles: 1,0,0,0</li>
+        <li>ID selectors: 0,1,0,0</li>
+        <li>Class selectors, attributes selectors, and pseudo-classes: 0,0,1,0</li>
+        <li>Element selectors and pseudo-elements: 0,0,0,1</li>
+    </ul>
+    <h2>The Cascade</h2>
+    <p>The cascade is the process by which browsers determine which CSS rules to apply when there are conflicting styles. The order of precedence is:</p>
+    <ol>
+        <li>Inline styles</li>
+        <li>IDs</li>
+        <li>Classes, attributes, and pseudo-classes</li>
+        <li>Elements and pseudo-elements</li>
+        <li>Importance (e.g., `!important` overrides all)</li>
+    </ol>
+    <h2>Example</h2>
+    <pre>
+/* HTML */
+&lt;div class="box" id="unique-box"&gt;Hello World!&lt;/div&gt;
+/* CSS */
+.box {
+    color: blue; /* Specificity: 0,0,1,0 */
+}
+#unique-box {
+    color: red; /* Specificity: 0,1,0,0 */
+}
+.unique-box {
+    color: green; /* Specificity: 0,0,1,0 */
+}
+&lt;style&gt;
+    .box {
+        color: blue; /* Specificity: 0,0,1,0 */
+    }
+    #unique-box {
+        color: red; /* Specificity: 0,1,0,0 */
+    }
+    .unique-box {
+        color: green; /* Specificity: 0,0,1,0 */
+    }
+&lt;/style&gt;
+</pre>
+</body>
+</html>
