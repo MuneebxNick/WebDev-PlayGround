@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists - CSS</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #333;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .code-example {
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    ul.custom-list {
+        list-style-type: square;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    ul li a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    ul li a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <h1>Styling Lists - CSS</h1>
+    <nav>
+        <ul>
+            <li><a href="https://www.w3schools.com/css/css_lists.asp">W3Schools - CSS Lists</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type">MDN - list-style-type</a>
+            </li>
+            <li><a href="https://www.css-tricks.com/almanac/properties/l/list-style/">CSS-Tricks - list-style</a></li>
+        </ul>
+    </nav>
+    <h2>List Style Types</h2>
+    <p>CSS provides various list style types to customize the appearance of lists. Here are some common types:</p>
+    <ul>
+        <li><strong>disc</strong> - Default bullet style.</li>
+        <li><strong>circle</strong> - Hollow circle bullet.</li>
+        <li><strong>square</strong> - Square bullet.</li>
+        <li><strong>decimal</strong> - Numbered list (1, 2, 3...).</li>
+        <li><strong>lower-alpha</strong> - Lowercase letters (a, b, c...).</li>
+        <li><strong>upper-alpha</strong> - Uppercase letters (A, B, C...).</li>
+        <li><strong>lower-roman</strong> - Lowercase Roman numerals (i, ii, iii...).</li>
+        <li><strong>upper-roman</strong> - Uppercase Roman numerals (I, II, III...).</li>
+    </ul>
+    <h2>Example of List Styling</h2>
+    <div class="code-example">
+        <pre>
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+li {
+    margin-bottom: 10px;
+}
+        </pre>
+    </div>
+    <h2>Customizing List Styles</h2>
+    <p>You can also use custom images for list items:</p>
+    <div class="code-example">
+        <pre>
+ul.custom-list {
+    list-style-image: url('path/to/image.png');
+    padding-left: 20px;
+}
+li.custom-list-item {
+    margin-bottom: 10px;
+}
+
+</pre>
+    </div>
+    <h2>Nested Lists</h2>
+    <p>Lists can be nested to create sub-lists:</p>
+    <ul>
+        <li>Main Item 1
+            <ul>
+                <li>Sub Item 1.1</li>
+                <li>Sub Item 1.2</li>
+            </ul>
+        </li>
+        <li>Main Item 2
+            <ul>
+                <li>Sub Item 2.1</li>
+                <li>Sub Item 2.2</li>
+            </ul>
+        </li>
+    </ul>
+    <h2>Conclusion</h2>
+    <p>Styling lists in CSS allows you to create visually appealing and organized content. By using different list style
+        types and customizing them, you can enhance the user experience on your web pages.</p>
+    <h2>Further Reading</h2>
+    <p>For more information, you can refer to the following resources:</p>
+    <ul>
+        <li><a href="https://www.w3schools.com/css/css_lists.asp">W3Schools - CSS Lists</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type">MDN - list-style-type</a></li>
+        <li><a href="https://www.css-tricks.com/almanac/properties/l/list-style/">CSS-Tricks - list-style</a></li>
+        <li><a href="https://www.freecodecamp.org/news/css-lists/">freeCodeCamp - CSS Lists</a></li>
+        <li><a href="https://cssreference.io/property/list-style-type/">CSS Reference - list-style-type</a></li>
+        <li><a href="https://cssreference.io/property/list-style-image/">CSS Reference - list-style-image</a></li>
+        <li><a href="https://www.smashingmagazine.com/2018/01/css-lists/">Smashing Magazine - CSS Lists</a></li>
+        <li><a href="https://www.w3.org/TR/css-lists-3/">W3C - CSS Lists Module Level 3</a></li>
+        <li><a href="https://www.cssreference.io/property/list-style/">CSS Reference - list-style</a></li>
+        <li><a href="https://www.cssreference.io/property/list-style-position/">CSS Reference - list-style-position</a>
+        </li>
+    </ul>
+    </div>
+
+</body>
+
+</html>
