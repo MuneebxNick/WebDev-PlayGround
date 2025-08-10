@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Property - CSS</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    h1,
+    h2 {
+        color: #333;
+    }
+
+    pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    footer {
+        margin-top: 20px;
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    div {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #e9ecef;
+    }
+
+    code {
+        background-color: #f8f9fa;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    
+</style>
+
+<body>
+    <h1>Overflow Property - CSS</h1>
+    <p>The <code>overflow</code> property in CSS controls how content that overflows an element's box is handled. It can
+        take the following values:</p>
+    <ul>
+        <li><code>visible</code>: Content is not clipped and may overflow the element's box.</li>
+        <li><code>hidden</code>: Content is clipped and not visible outside the element's box.</li>
+        <li><code>scroll</code>: Content is clipped, but a scrollbar is added to view the overflowing content.</li>
+        <li><code>auto</code>: If content overflows, a scrollbar is added; otherwise, no scrollbar is shown.</li>
+        <li><code>clip</code>: Similar to <code>hidden</code>, but does not allow scrolling.</li>
+    </ul>
+    <h2>Example Usage</h2>
+    <pre><code>div {
+    width: 200px;
+    height: 100px;
+    overflow: auto; /* Adds a scrollbar if content overflows */
+    
+}</code></pre>
+    <h2>Example</h2>
+    <div style="width: 200px; height: 100px; overflow: auto; border: 1px solid black;">
+        This is a long text that will overflow the box. Scroll to see more content.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+    </div>
+    <p>In this example, the <code>overflow: auto;</code> property allows the user to scroll through the overflowing
+        content.</p>
+    <h2>Related Properties</h2>
+    <ul>
+        <li><code>overflow-x</code>: Controls horizontal overflow.</li>
+        <li><code>overflow-y</code>: Controls vertical overflow.</li>
+        <li><code>overflow-wrap</code>: Controls how text wraps within an element.</li>
+        <li><code>text-overflow</code>: Controls how overflowed content is displayed in a single line.</li>
+    </ul>
+    <h2>Browser Compatibility</h2>
+    <p>The <code>overflow</code> property is widely supported across all modern browsers. However, specific behaviors
+        may vary slightly, especially with the <code>auto</code> value.</p>
+    <h2>Further Reading</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">MDN Web Docs - overflow</a></li>
+        <li><a href="https://www.w3.org/TR/css-overflow-3/">W3C CSS Overflow Module Level 3</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/o/overflow/">CSS-Tricks - Overflow</a></li>
+        <li><a href="https://www.w3schools.com/cssref/pr_pos_overflow.asp">W3Schools - CSS Overflow Property</a></li>
+        <li><a href="https://www.smashingmagazine.com/2018/01/css-overflow-property/">Smashing Magazine - Understanding
+                the CSS Overflow Property</a></li>
+        <li><a href="https://www.freecodecamp.org/news/css-overflow-property/">freeCodeCamp - CSS Overflow Property
+                Explained</a></li>
+        <li><a href="https://www.tutorialspoint.com/css/css_overflow_property.htm">TutorialsPoint - CSS Overflow
+                Property</a></li>
+    </ul>
+    <h2>Conclusion</h2>
+    <p>The <code>overflow</code> property is essential for managing how content is displayed when it exceeds the
+        boundaries of its container. Understanding and using this property effectively can enhance user experience by
+        providing a way to access all content without disrupting the layout.</p>
+</body>
+
+</html>
