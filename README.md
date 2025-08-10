@@ -32,7 +32,7 @@ A personal portfolio website to showcase my work and skills.
 
 - **🛠 Technologies Used:** HTML, CSS, JavaScript
 <!-- - **🌍 Live Demo:** [View Demo](#) -->
-- **📦 Source Code:** [View Repository](#)
+<!-- - **📦 Source Code:** [View Repository](#)
 
 ---
 
@@ -52,7 +52,7 @@ An e-commerce website built with a focus on user experience and functionality.
 
 - **🛠 Technologies Used:** HTML, CSS, JavaScript, Node.js
 - **🌍 Live Demo:** [View Demo](#)
-- **📦 Source Code:** [View Repository](#) -->
+- **📦 Source Code:** [View Repository](#) --> -->
 
 ## 📚 Getting Started
 
