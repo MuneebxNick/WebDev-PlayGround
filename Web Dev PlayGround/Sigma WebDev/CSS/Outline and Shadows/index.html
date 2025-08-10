@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows & Outlines</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #333;
+    }
+
+    div {
+        /* background-color: #6f6d6d; */
+        border-radius: 5px;
+    }
+
+    pre {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* code {
+        font-family: monospace;
+        background-color: #e0e0e0;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+    .code-example {
+        margin-top: 20px;
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 5px;
+    } */
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    .properties {
+        margin-top: 20px;
+        background-color: #fdcccc;
+        padding: 50px;
+        border-radius: 2px;
+    }
+
+    ul li a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    ul li a:hover {
+        text-decoration: underline;
+    }
+
+    p {
+        margin-bottom: 15px;
+        font-family: gilroy;
+    }
+</style>
+
+<body>
+    <h1>Outlines & Shadows</h1>
+    <p>Outlines and shadows are used to enhance the appearance of elements on a webpage.</p>
+    <h2>Outlines</h2>
+    <p>Outlines are lines that are drawn around elements, similar to borders but do not take up space.</p>
+    <h3>Example of Outlines</h3>
+    <div style="outline: 2px solid blue; padding: 10px; margin: 10px;">
+        This is an element with an outline.
+    </div>
+    <h2>Shadows</h2>
+    <p>Shadows can be applied to elements to create a sense of depth.</p>
+    <h3>Example of Shadows</h3>
+    <div style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); padding: 20px; margin: 10px;">
+        This is an element with a shadow.
+    </div>
+    <h2>Combining Outlines and Shadows</h2>
+    <p>You can combine outlines and shadows for a more pronounced effect.</p>
+    <div style="outline: 2px solid red; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); padding: 20px; margin: 10px;">
+        This element has both an outline and a shadow.
+    </div>
+    <h2>CSS Properties</h2>
+    <p>Here are the CSS properties used for outlines and shadows:</p>
+    <ul class="properties">
+        <li><code>outline</code>: Defines the outline of an element.</li>
+        <li><code>box-shadow</code>: Applies shadow effects around an element.</li>
+        <li><code>outline-color</code>: Sets the color of the outline.</li>
+        <li><code>outline-style</code>: Specifies the style of the outline (e.g., solid, dashed).</li>
+        <li><code>outline-width</code>: Sets the width of the outline.</li>
+        <li><code>box-shadow-offset-x</code>, <code>box-shadow-offset-y</code>: Define the horizontal and vertical
+            offsets of the shadow.</li>
+        <li><code>box-shadow-blur-radius</code>: Sets the blur radius of the shadow.</li>
+        <li><code>box-shadow-spread-radius</code>: Defines the spread radius of the shadow.</li>
+        <li><code>box-shadow-color</code>: Sets the color of the shadow.</li>
+    </ul>
+    <div class="code-example">
+        <h2>HTML Code Example</h2>
+        <pre>
+        <code>
+            &lt;div style="outline: 2px solid blue; padding: 10px; margin: 10px;"&gt;
+                This is an element with an outline.
+            &lt;/div&gt;
+            &lt;div style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); padding: 20px; margin: 10px;"&gt;
+                This is an element with a shadow.
+            &lt;/div&gt;
+            &lt;div style="outline: 2px solid red; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); padding: 20px; margin: 10px;"&gt;
+                This element has both an outline and a shadow.
+            &lt;/div&gt;
+        </code>
+    </pre>
+    </div>
+    <h2>CSS Code Example</h2>
+    <pre>
+        <code>
+            .outline-example {
+                outline: 2px solid blue;
+                padding: 10px;
+                margin: 10px;
+            }
+            .shadow-example {
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                margin: 10px;
+            }
+            .combined-example {
+                outline: 2px solid red;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                margin: 10px;
+            }
+        </code>
+    </pre>
+    <h2>Conclusion</h2>
+    <p>Using outlines and shadows effectively can greatly enhance the visual appeal of your web elements.</p>
+    </div>
+    <h2>Further Reading</h2>
+    <p>For more information, you can refer to the following resources:</p>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline" target="_blank">MDN Web Docs - CSS
+                Outline</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow" target="_blank">MDN Web Docs - CSS Box
+                Shadow</a></li>
+        <li><a href="https://www.w3schools.com/css/css3_shadows.asp" target="_blank">W3Schools - CSS3 Shadows</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/o/outline/" target="_blank">CSS-Tricks - Outline</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/b/box-shadow/" target="_blank">CSS-Tricks - Box
+                Shadow</a></li>
+        <li><a href="https://www.w3.org/TR/css-box-3/#box-shadow" target="_blank">W3C - CSS Box Shadow Module Level
+                3</a></li>
+        <li><a href="https://www.smashingmagazine.com/2018/01/css-shadows-outlines/" target="_blank">Smashing Magazine -
+                CSS Shadows and Outlines</a></li>
+        <li><a href="https://www.freecodecamp.org/news/css-shadows-and-outlines/" target="_blank">freeCodeCamp - CSS
+                Shadows and Outlines</a></li>
+        <li><a href="https://www.cssreference.io/property/box-shadow/" target="_blank">CSS Reference - Box Shadow</a>
+        </li>
+        <li><a href="https://www.cssreference.io/property/outline/" target="_blank">CSS Reference - Outline</a></li>
+    </ul>
+
+</body>
+
+</html>
