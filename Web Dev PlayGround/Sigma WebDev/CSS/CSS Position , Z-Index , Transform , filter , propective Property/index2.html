@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Properties Learning</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+h2 {
+    margin-top: 0;
+    color: #222;
+}
+.property-desc {
+    margin-bottom: 15px;
+}
+.example {
+    margin: 15px 0;
+    padding: 15px;
+    border: 2px dashed #ccc;
+    background: #fafafa;
+    border-radius: 8px;
+}
+.code-preview {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.code-preview code {
+    white-space: pre;
+    display: block;
+}
+
+/* Position Example */
+.relative-box {
+    position: relative;
+    background: lightblue;
+    padding: 20px;
+}
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: salmon;
+    padding: 10px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Z-index Example */
+.z-container {
+    position: relative;
+    height: 150px;
+}
+.z-box {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 15px;
+    left: 15px;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+.box1 { background: tomato; z-index: 1; }
+.box2 { background: teal; z-index: 2; left: 50px; top: 50px; }
+
+/* Transform Example */
+.transform-box {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    transition: transform 0.4s ease;
+    border-radius: 8px;
+}
+.transform-box:hover {
+    transform: rotate(20deg) scale(1.2) translateX(20px);
+}
+
+/* Filter Example */
+.filter-box img {
+    width: 200px;
+    transition: filter 0.4s ease;
+    border-radius: 8px;
+}
+.filter-box img:hover {
+    filter: grayscale(80%) blur(2px) brightness(1.2);
+}
+
+/* Perspective Example */
+.perspective-container {
+    perspective: 600px;
+    width: 200px;
+    height: 200px;
+}
+.perspective-box {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00f, #0ff);
+    transform: rotateY(25deg);
+    border-radius: 8px;
+}
+</style>
+</head>
+<body>
+
+<section>
+    <h2>1. CSS Position</h2>
+    <p class="property-desc">
+        The <code>position</code> property determines how an element is placed in the document.
+        <br><b>Common values:</b> static, relative, absolute, fixed, sticky.
+    </p>
+    <div class="example">
+        <div class="relative-box">
+            Relative Box (Parent)
+            <div class="absolute-box">Absolute Box (Child)</div>
+        </div>
+    </div>
+    <div class="code-preview">
+<code>&lt;div class="relative-box"&gt;
+    Relative Box (Parent)
+    &lt;div class="absolute-box"&gt;Absolute Box&lt;/div&gt;
+&lt;/div&gt;
+
+.relative-box {
+    position: relative;
+}
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}</code>
+    </div>
+</section>
+
+<section>
+    <h2>2. CSS Z-Index</h2>
+    <p class="property-desc">
+        <code>z-index</code> controls the stack order of elements. Higher values are displayed on top of lower ones.
+    </p>
+    <div class="example z-container">
+        <div class="z-box box1">Box 1</div>
+        <div class="z-box box2">Box 2</div>
+    </div>
+    <div class="code-preview">
+<code>&lt;div class="z-container"&gt;
+    &lt;div class="z-box box1"&gt;Box 1&lt;/div&gt;
+    &lt;div class="z-box box2"&gt;Box 2&lt;/div&gt;
+&lt;/div&gt;
+
+.box1 { z-index: 1; }
+.box2 { z-index: 2; }</code>
+    </div>
+</section>
+
+<section>
+    <h2>3. CSS Transform</h2>
+    <p class="property-desc">
+        The <code>transform</code> property applies rotation, scaling, skewing, or translation to elements.
+    </p>
+    <div class="example">
+        <div class="transform-box"></div>
+    </div>
+    <div class="code-preview">
+<code>&lt;div class="transform-box"&gt;&lt;/div&gt;
+
+.transform-box:hover {
+    transform: rotate(20deg) scale(1.2) translateX(20px);
+}</code>
+    </div>
+</section>
+
+<section>
+    <h2>4. CSS Filter</h2>
+    <p class="property-desc">
+        The <code>filter</code> property applies visual effects such as blur, grayscale, and brightness.
+    </p>
+    <div class="example filter-box">
+        <img src="https://images.pexels.com/photos/32357423/pexels-photo-32357423.jpeg" alt="Sample Image">
+    </div>
+    <div class="code-preview">
+<code>&lt;img src="image.jpg"&gt;
+
+img:hover {
+    filter: grayscale(80%) blur(2px) brightness(1.2);
+}</code>
+    </div>
+</section>
+
+<section>
+    <h2>5. CSS Perspective</h2>
+    <p class="property-desc">
+        The <code>perspective</code> property defines the 3D depth view for transformed elements.
+    </p>
+    <div class="example perspective-container">
+        <div class="perspective-box"></div>
+    </div>
+    <div class="code-preview">
+<code>&lt;div class="perspective-container"&gt;
+    &lt;div class="perspective-box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+.perspective-container {
+    perspective: 600px;
+}
+.perspective-box {
+    transform: rotateY(25deg);
+}</code>
+    </div>
+</section>
+
+</body>
+</html>
