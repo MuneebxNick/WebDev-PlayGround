@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties - CSS</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1, h2 {
+        color: #333;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+        color: #444;
+    }
+
+    strong {
+        color: #555;
+    }
+
+    p {
+        margin-bottom: 15px;
+        color: #555;
+    }
+
+    pre {
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    pre code {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1em;
+    }
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <h1>CSS Display Property</h1>
+    <p>The <strong>display</strong> property in CSS is used to control the layout of elements on a web page. It
+        determines how an element is displayed in the document flow.</p>
+    <h2>Common Display Values</h2>
+    <ul>
+        <li><strong>block</strong>: The element is displayed as a block-level element, taking up the full width
+            available.</li>
+        <li><strong>inline</strong>: The element is displayed as an inline element, only taking up as much width as
+            necessary.</li>
+        <li><strong>inline-block</strong>: The element is displayed as an inline-level block container, allowing it to
+            have width and height.</li>
+        <li><strong>none</strong>: The element is not displayed at all (it has no effect on layout).</li>
+        <li><strong>flex</strong>: The element becomes a flex container, enabling flexible layouts.</li>
+        <li><strong>grid</strong>: The element becomes a grid container, allowing for grid-based layouts.</li>
+        <li><strong>table</strong>: The element is displayed as a table.</li>
+        <li><strong>table-row</strong>: The element is displayed as a table row.</li>
+        <li><strong>table-cell</strong>: The element is displayed as a table cell.</li>
+        <li><strong>list-item</strong>: The element is displayed as a list item.</li>
+        <li><strong>run-in</strong>: The element behaves like a block-level element, but can also be treated as an
+            inline element in certain contexts.</li>
+    </ul>
+    <h2>Example Usage</h2>
+    <pre><code>/* Block-level element */
+div {
+    display: block;
+}
+/* Inline element */
+span {
+    display: inline;
+}
+/* Inline-block element */
+span.inline-block {
+    display: inline-block;
+}
+/* Flex container */
+.container {
+    display: flex;
+}
+/* Grid container */
+.grid-container {
+    display: grid;
+}
+/* Hidden element */
+.hidden {
+    display: none;
+}
+</code></pre>
+    <h2>Notes</h2>
+    <p>Using the <strong>display</strong> property effectively can greatly enhance the layout and responsiveness of your
+        web pages. It is essential to understand how different display values interact with each other, especially when
+        using flexbox or grid layouts.</p>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank">MDN Web Docs - CSS
+                display</a></li>
+        <li><a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">W3Schools - CSS Display
+                Property</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/d/display/" target="_blank">CSS-Tricks - Display
+                Property</a></li>
+        <li><a href="https://www.freecodecamp.org/news/css-display-property-explained/" target="_blank">freeCodeCamp -
+                CSS Display Property Explained</a></li>
+        <li><a href="https://www.smashingmagazine.com/2018/01/css-display-property/" target="_blank">Smashing
+                Magazine - Understanding the CSS Display Property</a></li>
+        <li><a href="https://www.cssreference.io/display/" target="_blank">CSS Reference - Display Property</a></li>
+    </ul>
+    <p>These resources provide in-depth explanations and examples of the CSS display property, helping you to master
+        its usage in web design.</p>
+    <h2>Conclusion</h2>
+    <p>The <strong>display</strong> property is a fundamental aspect of CSS that allows you to control how elements are
+        presented on the page. By understanding and utilizing different display values, you can create complex and
+        responsive layouts that enhance user experience.</p>
+    <h2>Related Topics</h2>
+    <ul>
+        <li><a href="https://www.w3schools.com/css/css_boxmodel.asp">CSS Box Model</a></li>
+        <li><a href="https://www.w3schools.com/css/css_flexbox.asp">CSS Flexbox</a></li>
+        <li><a href="https://www.w3schools.com/css/css_grid.asp">CSS Grid Layout</a></li>
+        <li><a href="https://www.w3schools.com/cssref/css_units.asp">CSS Units Reference</a></li>
+        <li><a href="https://www.w3schools.com/cssref/css_selectors.asp">CSS Selectors</a></li>
+        <li><a href="https://www.w3schools.com/css/css_mediaqueries_intro.asp">CSS Media Queries</a></li>
+    </ul>
+    <p>These related topics will help you further enhance your CSS skills and create more sophisticated web designs.</p>
+
+</body>
+
+</html>
