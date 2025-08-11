@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Excercise</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        --pcolor: #aa7c8b;
+        --scolor: #bda4a4;
+        --navcolor: #5f9897;
+        --hcolor: #e2bfbf;
+        --tcolor: #d4eaec;
+        --htcolor: #754c97;
+        --hbcolor: #c4c4c4;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: var(--pcolor);
+    }
+
+    nav {
+        background-color: var(--navcolor);
+        padding: 20px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        padding: 0 10px;
+        color: var(--tcolor);
+    }
+
+    /* nav ul li:hover {
+        color: var(--htcolor);
+        background-color: var(--hbcolor);
+
+    } */
+
+    nav ul li a{
+        text-decoration: none;
+        color: var(--tcolor);
+        padding: 10px 15px;
+    }
+
+    nav ul li a:hover{
+        color: var(--htcolor);
+        background-color: var(--hbcolor);
+        border-radius: 20px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
