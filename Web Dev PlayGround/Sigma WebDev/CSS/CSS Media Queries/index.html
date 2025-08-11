@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #333;
+    }
+
+    pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    code {
+        font-family: monospace;
+    }
+
+    footer {
+        margin-top: 20px;
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <h1>CSS Media Queries</h1>
+    <p>CSS Media Queries are used to apply styles based on the device characteristics, such as screen size, resolution,
+        and orientation.</p>
+    <h2>Basic Syntax</h2>
+    <pre><code>@media media-type and (condition) {
+    /* CSS rules here */
+}</code></pre>
+    <h2>Examples</h2>
+    <h3>Example 1: Responsive Design</h3>
+    <pre><code>@media screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}</code></pre>
+
+    <h3>Example 2: Print Styles</h3>
+    <pre><code>@media print {
+    body {
+        font-size: 12pt;
+    }
+}</code></pre>
+
+    <h2>Common Media Features</h2>
+    <ul>
+        <li><code>width</code>: Width of the viewport.</li>
+        <li><code>height</code>: Height of the viewport.</li>
+        <li><code>orientation</code>: Landscape or portrait mode.</li>
+        <li><code>resolution</code>: Device pixel ratio.</li>
+    </ul>
+    <h2>Media Types</h2>
+    <ul>
+        <li><code>all</code>: Suitable for all devices.</li>
+        <li><code>print</code>: For printed documents.</li>
+        <li><code>screen</code>: For computer screens, tablets, smartphones, etc.</li>
+        <li><code>speech</code>: For speech synthesizers.</li>
+    </ul>
+    <h2>Combining Media Queries</h2>
+    <pre><code>@media screen and (min-width: 600px) and (max-width: 1200px) {
+    body {
+        background-color: lightgreen;
+    }
+}</code></pre>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">MDN Web Docs -
+                Using Media Queries</a></li>
+        <li><a href="https://www.w3.org/TR/css3-mediaqueries/">W3C - Media Queries</a></li>
+        <li><a href="https://css-tricks.com/css-media-queries/">CSS-Tricks - CSS Media Queries</a></li>
+        <li><a href="https://www.freecodecamp.org/news/css-media-queries/">freeCodeCamp - CSS Media Queries</a></li>
+        <li><a href="https://www.smashingmagazine.com/2011/12/css3-media-queries/">Smashing Magazine - CSS3 Media
+                Queries</a></li>
+        <li><a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">W3Schools - CSS Media Queries</a></li>
+    </ul>
+    <h2>Conclusion</h2>
+    <p>CSS Media Queries are a powerful tool for creating responsive designs that adapt to different devices and screen
+        sizes. By using media queries, you can ensure that your web content is accessible and visually appealing across
+        a wide range of devices.</p>
+
+</body>
+
+</html>
