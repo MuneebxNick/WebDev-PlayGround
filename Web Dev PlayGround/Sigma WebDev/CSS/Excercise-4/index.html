@@ -60,6 +60,25 @@
         background-color: var(--hbcolor);
         border-radius: 20px;
     }
+    
+    @media  only screen and (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+        }
+        nav{
+            background-color: var(--hcolor);
+        }
+        nav ul li {
+            padding: 10px 0;
+        }
+        
+        body{
+            background-color: var(--scolor);
+        }
+        nav ul li a{
+            color: rgb(227, 86, 86);
+        }
+    }
 </style>
 
 <body>
