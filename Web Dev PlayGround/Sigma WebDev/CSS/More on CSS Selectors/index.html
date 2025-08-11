@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More ON CSS Selectors</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    p {
+        color: #555;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    code {
+        background-color: #eaeaea;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+
+    strong {
+        color: #000;
+    }
+
+    ul li strong {
+        color: #007bff;
+    }
+
+    ul li code {
+        color: #d63384;
+    }
+
+    h3 {
+        color: #333;
+        margin-top: 20px;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <h1>More ON CSS Selectors</h1>
+    <p>CSS selectors are powerful tools for selecting HTML elements to apply styles. Here are some advanced selectors:
+    </p>
+    <ul>
+        <li><strong>Universal Selector (*)</strong>: Selects all elements in the document.</li>
+        <li><strong>Type Selector (element)</strong>: Selects all elements of a specific type, e.g., <code>p</code> for
+            paragraphs.</li>
+        <li><strong>Class Selector (.classname)</strong>: Selects all elements with a specific class.</li>
+        <li><strong>ID Selector (#idname)</strong>: Selects a single element with a specific ID.</li>
+        <li><strong>Attribute Selector ([attribute])</strong>: Selects elements with a specific attribute, e.g.,
+            <code>[type="text"]</code>.
+        </li>
+        <li><strong>Pseudo-classes (:pseudo-class)</strong>: Selects elements based on their state, e.g.,
+            <code>:hover</code>, <code>:focus</code>.
+        </li>
+        <li><strong>Pseudo-elements (::pseudo-element)</strong>: Selects parts of an element, e.g.,
+            <code>::before</code>, <code>::after</code>.
+        </li>
+        <li><strong>Descendant Selector (ancestor descendant)</strong>: Selects elements that are descendants of a
+            specified ancestor.</li>
+        <li><strong>Child Selector (parent > child)</strong>: Selects direct children of a specified parent.</li>
+        <li><strong>Sibling Selector (previous + next)</strong>: Selects the next sibling of a specified element.</li>
+        <li><strong>General Sibling Selector (previous ~ siblings)</strong>: Selects all siblings that follow a
+            specified element.</li>
+        <li><strong>Group Selector (selector1, selector2)</strong>: Applies the same styles to multiple selectors.</li>
+        <li><strong>Attribute Selector with Value ([attribute="value"])</strong>: Selects elements with a specific
+            attribute value.</li>
+        <li><strong>Negation Pseudo-class (:not(selector))</strong>: Selects elements that do not match a specified
+            selector.</li>
+        <li><strong>First Child Selector (:first-child)</strong>: Selects the first child of a parent element.</li>
+        <li><strong>Last Child Selector (:last-child)</strong>: Selects the last child of a parent element.</li>
+        <li><strong>Nth Child Selector (:nth-child(n))</strong>: Selects the nth child of a parent element, where n can
+            be a number, keyword, or formula.</li>
+        <li><strong>Attribute Selector with Multiple Values ([attribute~="value"])</strong>: Selects elements with an
+            attribute that contains a specific word.</li>
+        <li><strong>Attribute Selector with Starts With ([attribute^="value"])</strong>: Selects elements with an
+            attribute that starts with a specific value.</li>
+        <li><strong>Attribute Selector with Ends With ([attribute$="value"])</strong>: Selects elements with an
+            attribute that ends with a specific value.</li>
+        <li><strong>Lang Selector (:lang(language))</strong>: Selects elements based on the language specified in the
+            lang attribute.</li>
+        <li><strong>Only Child Selector (:only-child)</strong>: Selects an element that is the only child of its parent.
+        </li>
+        <li><strong>Only-of-type Selector (:only-of-type)</strong>: Selects an element that is the only one of its type
+            among its siblings.</li>
+        <li><strong>Empty Selector (:empty)</strong>: Selects elements that have no children (including text nodes).
+        </li>
+        <li><strong>Checked Selector (:checked)</strong>: Selects input elements that are checked, such as checkboxes or
+            radio buttons.</li>
+    </ul>
+    <p>These selectors can be combined and used in various ways to create complex styles for your web pages.
+        Understanding how to use them effectively can greatly enhance your CSS skills.</p>
+    <h3>Refrences</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank">MDN Web Docs - CSS
+                Selectors</a></li>
+        <li><a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">W3Schools - CSS Selectors
+                Reference</a></li>
+        <li><a href="https://css-tricks.com/almanac/selectors/" target="_blank">CSS-Tricks - CSS Selectors Almanac</a>
+        </li>
+        <li><a href="https://www.w3.org/TR/selectors/" target="_blank">W3C - Selectors Level 4</a></li>
+        <li><a href="https://www.smashingmagazine.com/2018/01/understanding-css-selectors/" target="_blank">Smashing
+                Magazine - Understanding CSS Selectors</a></li>
+        <li><a href="https://www.freecodecamp.org/news/css-selectors-explained-with-examples/"
+                target="_blank">freeCodeCamp - CSS Selectors Explained with Examples</a></li>
+        <li><a href="https://www.cssreference.io/selectors/" target="_blank">CSS Reference - CSS Selectors</a></li>
+        <li><a href="https://www.tutorialspoint.com/css/css_selectors.htm" target="_blank">TutorialsPoint - CSS
+                Selectors</a></li>
+        <li><a href="https://www.geeksforgeeks.org/css-selectors/" target="_blank">GeeksforGeeks - CSS Selectors</a>
+        </li>
+    </ul>
+</body>
+
+</html>
