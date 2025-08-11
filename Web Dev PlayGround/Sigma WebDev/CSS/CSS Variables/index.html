@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables - CSS</title>
+</head>
+<style>
+    :root {
+        --main-bg-color: #f0f0f0;
+        --main-text-color: #333;
+        --primary-color: #4CAF50;
+        --secondary-color: #421890;
+    }
+
+    body {
+        background-color: var(--main-bg-color);
+        color: var(--main-text-color);
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: var(--primary-color);
+    }
+
+    p {
+        color: var(--secondary-color);
+    }
+
+    .container {
+        padding: 20px;
+        border: 1px solid var(--main-text-color);
+        border-radius: 5px;
+        background-color: var(--main-bg-color);
+    }
+
+    .button {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: var(--secondary-color);
+    }
+</style>
+
+<body>
+    <p>CSS variables are custom properties that allow you to store values and reuse them throughout your CSS. They are
+        defined using the `--` prefix and can be accessed using the `var()` function.</p>
+    <div class="container">
+        <h1>Welcome to CSS Variables</h1>
+        <p>This is an example of using CSS variables to style a webpage.</p>
+        <button class="button">Click Me</button>
+    </div>
+    <p>In this example, we define several CSS variables in the `:root` selector, which makes them globally accessible.
+        We then use these variables to style various elements on the page.</p>
+    <p>Using CSS variables makes it easy to maintain and update styles across a website, as you can change the value of
+        a variable in one place and have it reflected everywhere it's used.</p>
+    <p>For more information, you can refer to the <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">MDN Web
+            Docs on CSS Custom Properties</a>.</p>
+    <p>Feel free to experiment with the CSS variables in this example. Change the values of the variables in the
+    <p>Here's a quick example of how to define and use a CSS variable:</p>
+    <pre>
+            :root {
+                --main-color: #3498db;
+            }
+
+            body {
+                background-color: var(--main-color);
+            }
+        </pre>
+    <p>In this example, we define a variable <code>--main-color</code> and use it to set the background color of the
+        body.</p>
+    <p>CSS variables can also be scoped to specific elements, allowing for more granular control over styles.</p>
+    <p>For example, you can define a variable within a specific class:</p>
+    <pre>
+            .my-class {
+                --text-color: #2c3e50;
+                color: var(--text-color);
+            }
+        </pre>
+    <p>In this case, the <code>--text-color</code> variable is only available within elements that have the
+        <code>my-class</code> class.
+    </p>
+    <p>CSS variables can also be used in media queries, allowing for responsive design:</p>
+    <pre>
+            @media (max-width: 600px) {
+                :root {
+                    --main-bg-color: #e0e0e0;
+                }
+            }
+        </pre>
+    <p>In this example, the <code>--main-bg-color</code> variable changes when the viewport width is 600 pixels or less.
+    </p>
+    <p>CSS variables are a powerful feature that can greatly enhance your CSS workflow, making it easier to manage and
+        maintain styles across your web projects.</p>
+    <p>Happy coding!</p>
+</body>
+
+
+</html>
