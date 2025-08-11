@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+    h1 {
+        text-align: center;
+    }
+    div {
+        margin-bottom: 20px;
+    }
+    .left-float {
+        float: left;
+        width: 50%;
+        background-color: lightblue;
+        padding: 20px;
+    }
+    .right-float {
+        float: right;
+        width: 50%;
+        background-color: lightcoral;
+        padding: 20px;
+    }
+    .clear-both {
+        clear: both;
+        background-color: lightgreen;
+        padding: 20px;
+    }
+    .normal-flow {
+        background-color: lightyellow;
+        padding: 20px;
+    }
+</style>
+
+<body>
+    <h1>CSS Float & Clear</h1>
+    <p>This page demonstrates the use of CSS float and clear properties.</p>
+    <div style="float: left; width: 50%; background-color: lightblue; padding: 20px;">
+        <h2>Left Float</h2>
+        <p>This section is floated to the left.</p>
+    </div>
+    <div style="float: right; width: 50%; background-color: lightcoral; padding: 20px;">
+        <h2>Right Float</h2>
+        <p>This section is floated to the right.</p>
+    </div>
+    <div style="clear: both; background-color: lightgreen; padding: 20px;">
+        <h2>Clear Both</h2>
+        <p>This section clears the float and appears below both floated sections.</p>
+    </div>
+    <div style="background-color: lightyellow; padding: 20px;">
+        <h2>Normal Flow</h2>
+        <p>This section is in the normal document flow and appears below the cleared section.</p>
+    </div>
+
+</body>
+</html>
