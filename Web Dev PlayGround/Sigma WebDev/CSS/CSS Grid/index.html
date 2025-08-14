@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - CSS</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1,
+    h2 {
+        color: #333;
+    }
+
+    p {
+        color: #555;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin: 5px 0;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    div {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    div>div {
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <h1>Grid - CSS</h1>
+    <p>CSS Grid Layout is a two-dimensional layout system for the web. It allows you to create complex layouts with rows
+        and columns, making it easier to design responsive web pages.</p>
+    <h2>Basic Example</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+        <div style="background-color: lightblue; padding: 20px;">Item 1</div>
+        <div style="background-color: lightcoral; padding: 20px;">Item 2</div>
+        <div style="background-color: lightgreen; padding: 20px;">Item 3</div>
+        <div style="background-color: lightgoldenrodyellow; padding: 20px;">Item 4</div>
+        <div style="background-color: lightpink; padding: 20px;">Item 5</div>
+        <div style="background-color: lightgray; padding: 20px;">Item 6</div>
+    </div>
+    <h2>Grid Properties</h2>
+    <ul>
+        <li><strong>grid-template-columns</strong>: Defines the number and size of columns in the grid.</li>
+        <li><strong>grid-template-rows</strong>: Defines the number and size of rows in the grid.</li>
+        <li><strong>gap</strong>: Sets the space between rows and columns.</li>
+        <li><strong>grid-area</strong>: Allows you to assign a specific area for an item within the grid.</li>
+        <li><strong>justify-items</strong>: Aligns items horizontally within their grid area.</li>
+        <li><strong>align-items</strong>: Aligns items vertically within their grid area.</li>
+        <li><strong>grid-auto-flow</strong>: Controls how items are placed in the grid when there is extra space.</li>
+        <li><strong>grid-template-areas</strong>: Allows you to define named grid areas for easier layout management.
+        </li>
+    </ul>
+    <p>For more advanced examples and tutorials, check out the resources listed below.</p>
+    <h2>Conclusion</h2>
+    <p>CSS Grid Layout is a powerful tool for creating responsive and complex web layouts. By mastering its properties
+        and techniques, you can significantly enhance your web design skills.</p>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">MDN Web Docs - CSS Grid
+                Layout</a></li>
+        <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks - A Complete Guide to Grid</a>
+        </li>
+        <li><a href="https://www.w3schools.com/css/css_grid.asp">W3Schools - CSS Grid Layout</a></li>
+    </ul>
+</body>
+
+</html>
