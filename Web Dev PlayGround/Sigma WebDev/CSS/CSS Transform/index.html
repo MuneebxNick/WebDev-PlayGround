@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform - CSS</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #333;
+    }
+
+    pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    code {
+        background-color: #e0e0e0;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <h1>Transform Property - CSS </h1>
+    <p>The <code>transform</code> property in CSS allows you to apply various transformations to an element, such as
+        rotation, scaling, translation, and skewing.</p>
+    <h2>Syntax</h2>
+    <pre><code>transform: none | transform-function | transform-function-list;</code></pre>
+    <h2>Values</h2>
+    <ul>
+        <li><code>none</code>: No transformation is applied.</li>
+        <li><code>translate(x, y)</code>: Moves the element from its current position.</li>
+        <li><code>scale(x, y)</code>: Scales the element by the specified factors.</li>
+        <li><code>rotate(angle)</code>: Rotates the element by the specified angle.</li>
+        <li><code>skew(x-angle, y-angle)</code>: Skews the element along the X and Y axes.</li>
+        <li><code>matrix(a, b, c, d, e, f)</code>: Applies a 2D transformation using a matrix.</li>
+        <li><code>perspective(value)</code>: Applies a perspective transformation to the element.</li>
+        <li><code>transform-function-list</code>: A comma-separated list of transform functions.</li>
+    </ul>
+    <h2>Examples</h2>
+    <h3>Translate Example</h3>
+    <pre><code>div {
+    transform: translate(50px, 100px);
+}</code></pre>
+    <h3>Scale Example</h3>
+    <pre><code>div {
+    transform: scale(1.5, 2);
+}</code></pre>
+    <h3>Rotate Example</h3>
+    <pre><code>div {
+    transform: rotate(45deg);
+}</code></pre>
+    <h3>Skew Example</h3>
+    <pre><code>div {
+    transform: skew(20deg, 10deg);
+}</code></pre>
+    <h3>Matrix Example</h3>
+    <pre><code>div {
+    transform: matrix(1, 0, 0, 1, 50, 100);
+}</code></pre>
+    <h3>Perspective Example</h3>
+    <pre><code>div {
+    transform: perspective(500px) rotateY(45deg);
+}</code></pre>
+    <h2>Browser Compatibility</h2>
+    <p>The <code>transform</code> property is widely supported in modern browsers. However, for older browsers, you may
+        need to use vendor prefixes like <code>-webkit-</code>, <code>-moz-</code>, and <code>-ms-</code>.</p>
+    <h2>Conclusion</h2>
+    <p>The <code>transform</code> property is a powerful tool in CSS that allows you to manipulate the appearance of
+        elements on the page. By combining different transform functions, you can create complex visual effects and
+        animations.</p>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">MDN Web Docs - transform</a></li>
+        <li><a href="https://www.w3.org/TR/css-transforms-1/">W3C CSS Transforms Module Level 1</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/t/transform/">CSS-Tricks - Transform</a></li>
+        
+    </ul>
+</body>
+
+</html>
