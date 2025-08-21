@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters - CSS</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1,
+    h2 {
+        color: #333;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    div {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    pre {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .container div {
+        flex: 1 1 200px;
+        /* Flexbox for responsive layout */
+        text-align: center;
+    }
+
+    .container img {
+        width: 100%;
+        /* Make images responsive */
+        height: auto;
+    }
+
+    .container p {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .container ul {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .container li {
+        margin: 5px 0;
+    }
+
+    .container h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container h1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .container p {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .container pre {
+        width: 100%;
+        overflow-x: auto;
+    }
+</style>
+
+<body>
+    <h1>Filters in CSS</h1>
+    <p>CSS filters allow you to apply graphical effects like blurring or color shifting to an element.</p>
+    <h2>CSS Filter Properties</h2>
+    <ul>
+        <li><strong>blur(px)</strong>: Applies a Gaussian blur to the element.</li>
+        <li><strong>brightness(%)</strong>: Adjusts the brightness of the element.</li>
+        <li><strong>contrast(%)</strong>: Adjusts the contrast of the element.</li>
+        <li><strong>drop-shadow(offsetX offsetY blurRadius color)</strong>: Applies a shadow effect to the element.</li>
+        <li><strong>grayscale(%)</strong>: Converts the element to grayscale.</li>
+        <li><strong>hue-rotate(deg)</strong>: Applies a hue rotation to the element.</li>
+        <li><strong>invert(%)</strong>: Inverts the colors of the element.</li>
+        <li><strong>opacity(%)</strong>: Adjusts the opacity of the element.</li>
+        <li><strong>saturate(%)</strong>: Adjusts the saturation of the element.</li>
+        <li><strong>sepia(%)</strong>: Applies a sepia filter to the element.</li>
+    </ul>
+
+    <h2>Examples</h2>
+
+    <div style="display: flex; gap: 20px;">
+        <div style="filter: blur(5px);">
+            <img src="https://images.pexels.com/photos/7870312/pexels-photo-7870312.jpeg" alt="Blur Example"
+                width="200">
+            <p>Blur</p>
+        </div>
+        <div style="filter: brightness(150%);">
+            <img src="https://images.pexels.com/photos/7870312/pexels-photo-7870312.jpeg" alt="Brightness Example"
+                width="200">
+            <p>Brightness</p>
+        </div>
+        <div style="filter: contrast(200%);">
+            <img src="https://images.pexels.com/photos/7870312/pexels-photo-7870312.jpeg" alt="Contrast Example"
+                width="200">
+            <p>Contrast</p>
+        </div>
+        <div style="filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));">
+            <img src="https://images.pexels.com/photos/7870312/pexels-photo-7870312.jpeg" alt="Drop Shadow Example"
+                width="200">
+            <p>Drop Shadow</p>
+        </div>
+        <div style="filter: grayscale(100%);">
+            <img src="https://images.pexels.com/photos/7870312/pexels-photo-7870312.jpeg" alt="Grayscale Example"
+                width="200">
+            <p>Grayscale</p>
+        </div>
+        <div style="filter: hue-rotate(90deg);">
+            <img src="https://images.pexels.com/photos/7870312/pexels-photo-7870312.jpeg" alt="Hue Rotate Example"
+                width="200">
+            <p>Hue Rotate</p>
+        </div>
+        <div style="filter: invert(100%);">
+            <img src="https://images.pexels.com/photos/7870312/pexels-photo-7870312.jpeg" alt="Invert Example"
+                width="200">
+            <p>Invert</p>
+        </div>
+        <div style="filter: opacity(50%);">
+            <img src="https://images.pexels.com/photos/7870312/pexels-photo-7870312.jpeg" alt="Opacity Example"
+                width="200">
+            <p>Opacity</p>
+        </div>
+        <div style="filter: saturate(200%);">
+            <img src="https://images.pexels.com/photos/7870312/pexels-photo-7870312.jpeg" alt="Saturate Example"
+                width="200">
+            <p>Saturate</p>
+        </div>
+        <div style="filter: sepia(100%);">
+            <img src="https://images.pexels.com/photos/7870312/pexels-photo-7870312.jpeg" alt="Sepia Example"
+                width="200">
+            <p>Sepia</p>
+        </div>
+    </div>
+
+
+    <h2>Usage</h2>
+    <p>To apply a filter, use the <code>filter</code> property in your CSS. For example:</p>
+    <pre>
+        .example {
+            filter: blur(5px);
+        }
+    </pre>
+    <p>Multiple filters can be combined by separating them with spaces:</p>
+    <pre>
+        .example {
+            filter: blur(5px) brightness(150%);
+        }
+    </pre>
+    <p>Note that not all filters are supported in all browsers, so check compatibility before using them.</p>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank">MDN Web Docs - CSS
+                filter</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/f/filter/" target="_blank">CSS-Tricks - CSS Filter</a>
+        </li>
+        <li><a href="https://caniuse.com/css-filters" target="_blank">Can I use - CSS Filters</a></li>
+    </ul>
+    <p>Explore these resources to learn more about CSS filters and how to use them effectively in your web projects.</p>
+    <h2>Conclusion</h2>
+    <p>CSS filters are a powerful tool for enhancing the visual appearance of web elements. They can be used to create
+        stunning effects and improve user experience. Experiment with different filters to see how they can transform
+        your designs.</p>
+
+</body>
+
+</html>
