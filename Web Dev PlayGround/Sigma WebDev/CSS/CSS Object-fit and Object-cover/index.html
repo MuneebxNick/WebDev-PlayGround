@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit and Object-cover</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1, h2, h3 {
+        color: #333;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        /* max-width: 1200px; Limit the width for better alignment */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .image-container {
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .image-container:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Default to cover */
+    }
+
+    .object-fit {
+        object-fit: contain;
+    }
+
+    .object-cover {
+        object-fit: cover;
+    }
+
+    .object-fill {
+        object-fit: fill;
+    }
+
+    .object-none {
+        object-fit: none;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 10px;
+        color: #555;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center; /* Center align the list */
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <h1>CSS Object-fit and Object-cover</h1>
+    <p>This page demonstrates the use of CSS properties <code>object-fit</code> and <code>object-cover</code>.</p>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://images.pexels.com/photos/32882820/pexels-photo-32882820.jpeg" alt="Object Fit Contain"
+                class="object-fit">
+            <p>Object Fit: Contain</p>
+        </div>
+        <div class="image-container">
+            <img src="https://images.pexels.com/photos/16276546/pexels-photo-16276546.png" alt="Object Fit Cover"
+                class="object-cover">
+            <p>Object Fit: Cover</p>
+        </div>
+        <div class="image-container">
+            <img src="https://images.pexels.com/photos/32010713/pexels-photo-32010713.jpeg" alt="Object Fit Fill"
+                class="object-fill">
+            <p>Object Fit: Fill</p>
+        </div>
+        <div class="image-container">
+            <img src="https://images.pexels.com/photos/32043147/pexels-photo-32043147.jpeg" alt="Object Fit None"
+                class="object-none">
+            <p>Object Fit: None</p>
+        </div>
+    </div>
+    <h2>Explanation of CSS Properties</h2>
+    <p>The <code>object-fit</code> property in CSS specifies how an image or video should be resized to fit its
+        container.</p>
+    <ul>
+        <li><code>contain</code>: The image will be resized to fit within the container while maintaining its aspect
+            ratio.</li>
+        <li><code>cover</code>: The image will cover the entire container, potentially cropping parts of the image to
+            maintain its aspect ratio.</li>
+        <li><code>fill</code>: The image will stretch to fill the container, disregarding its aspect ratio.</li>
+        <li><code>none</code>: The image will not be resized and will maintain its original size.</li>
+    </ul>
+    <p>These properties are particularly useful for responsive design, allowing images and videos to adapt to different
+        screen sizes and orientations without losing their visual integrity.</p>
+    <h2>Conclusion</h2>
+    <p>The <code>object-fit</code> property is a powerful tool for controlling how images and videos are displayed
+        within their containers. It allows for flexible design choices, ensuring that media content looks good
+        across different screen sizes and aspect ratios.</p>
+    <h2>Try It Yourself</h2>
+    <p>Feel free to modify the image sources and styles in the examples above to see how they behave with different
+        images.</p>
+    <h3>Resources</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">MDN Web Docs - object-fit</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/o/object-fit/">CSS-Tricks - object-fit</a></li>
+        <li><a href="https://www.w3schools.com/cssref/css3_pr_object-fit.asp">W3Schools - CSS object-fit</a></li>
+    </ul>
+
+</body>
+
+</html>
