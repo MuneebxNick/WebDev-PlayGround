@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition - CSS</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+    }
+
+    h1,
+    h2 {
+        color: #333;
+    }
+
+    .transition1,
+    .transition2 {
+        width: 200px;
+        height: 100px;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        margin-bottom: 20px;
+        transition: background-color, transform 0.5s ease, transform 0.5s ease;
+        /* transition-property, transition-duration, transition-timing-function */
+        border-radius: 5px;
+        /* transition-property: ;
+        transition-duration: ;
+        transition-timing-function: ;
+        transition-delay: ; */
+    }
+
+    .transition1:hover {
+        background-color: #226025;
+        transform: translate(50%);
+    }
+
+    .transition2:hover {
+        background-color: #2196F3;
+        transform: scale(1.1);
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: #2196F3;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <h1>Transition in CSS</h1>
+    <p>CSS transitions allow you to change property values smoothly (over a given duration).</p>
+    <h2>Example</h2>
+    <div class="transition1">
+        <p>Hover over me!</p>
+    </div>
+    <h2>Properties</h2>
+    <ul>
+        <li><strong>transition-property</strong>: Specifies the name of the CSS property to which the transition is
+            applied.</li>
+        <li><strong>transition-duration</strong>: Defines how long the transition should take.</li>
+        <li><strong>transition-timing-function</strong>: Describes how the intermediate values of the CSS properties
+            being affected by a transition effect are calculated.</li>
+        <li><strong>transition-delay</strong>: Specifies when the transition effect will start.</li>
+    </ul>
+    <h2>Example with Multiple Properties</h2>
+    <div class="transition2">
+        <p>Hover over me!</p>
+    </div>
+    <h2>Browser Support</h2>
+    <p>CSS transitions are supported in all modern browsers. However, for older browsers, you may need to use vendor
+        prefixes like <code>-webkit-</code>, <code>-moz-</code>, etc.</p>
+    <h2>Conclusion</h2>
+    <p>CSS transitions provide a simple way to create smooth animations and effects on web pages, enhancing user
+        experience.</p>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">MDN Web
+                Docs - Using CSS Transitions</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/t/transition/">CSS-Tricks - Transition</a></li>
+
+    </ul>
+
+</body>
+
+</html>
