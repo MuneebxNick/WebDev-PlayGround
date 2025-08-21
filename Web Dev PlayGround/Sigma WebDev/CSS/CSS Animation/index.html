@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations - CSS</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+    }
+
+    .animation-box {
+        width: 100px;
+        height: 100px;
+        background-color: #4CAF50;
+        /* Animation name, duration, iteration count, and direction */
+        animation: exampleAnimation 2s infinite alternate;
+        /* Optional: add border-radius for rounded corners */
+        border-radius: 5px;
+    }
+
+    h1,
+    h2 {
+        color: #333;
+    }
+
+    p {
+        color: #555;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: #2196F3;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Animation keyframes */
+    @keyframes exampleAnimation {
+        from {
+            transform: translateX(0);
+            background-color: #4CAF50;
+        }
+
+        to {
+            transform: translateX(400px);
+            scale: 1.5;
+            /* transform: skew(50deg); */
+            background-color: #2196F3;
+        }
+    }
+</style>
+
+<body>
+    <h1>Animations in CSS</h1>
+    <p>CSS animations allow you to animate transitions between different CSS styles. They consist of two main
+        components: the animation itself and the keyframes that define the styles at various points during the
+        animation.</p>
+    <h2>Example of a Simple Animation</h2>
+    <div class="animation-box"></div>
+    <h2>Keyframes</h2>
+    <p>Keyframes define the styles at various points during the animation sequence. The <code>@keyframes</code>
+        rule specifies the name of the animation and the styles to apply at different stages.</p>
+    <ul>
+        <li><code>from</code> - The starting point of the animation.</li>
+        <li><code>to</code> - The ending point of the animation.</li>
+        <li>You can also use percentages (e.g., <code>0%</code>, <code>50%</code>, <code>100%</code>) to define
+            intermediate steps.</li>
+    </ul>
+    <h2>Animation Properties</h2>
+    <p>To apply an animation, you can use the following properties:</p>
+    <ul>
+        <li><code>animation-name</code> - Specifies the name of the keyframes to use.</li>
+        <li><code>animation-duration</code> - Defines how long the animation should take to complete one cycle.</li>
+        <li><code>animation-timing-function</code> - Describes how the animation will progress over time (e.g., linear,
+            ease-in, ease-out).</li>
+        <li><code>animation-iteration-count</code> - Specifies how many times the animation should repeat (e.g., 1,
+            infinite).</li>
+        <li><code>animation-direction</code> - Defines whether the animation should play forwards, backwards, or
+            alternate between both directions.</li>
+        <li><code>animation-fill-mode</code> - Specifies how the styles should apply before and after the animation
+            runs.</li>
+        <li><code>animation-delay</code> - Sets a delay before the animation starts.</li>
+    </ul>
+    <p>In this example, the box will move horizontally and change color over a duration of 2 seconds, repeating
+        infinitely in an alternating direction.</p>
+    <h2>Conclusion</h2>
+    <p>CSS animations provide a powerful way to create dynamic and engaging user interfaces. By defining keyframes and
+        using animation properties, you can create smooth transitions and effects that enhance the user experience.</p>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">MDN Web Docs - CSS Animations</a>
+        </li>
+        <li><a href="https://www.w3schools.com/css/css3_animations.asp">W3Schools - CSS Animations</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/a/animation/">CSS-Tricks - Animation Properties</a></li>
+    </ul>
+
+</body>
+
+</html>
