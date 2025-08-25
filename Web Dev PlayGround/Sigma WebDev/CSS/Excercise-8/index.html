@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise-8 Solution</title>
+</head>
+<style>
+    .main {
+        width: 90vw;
+        height: 70vh;
+        background-color: bisque;
+        position: relative;
+    }
+
+    .ball {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        /* animation: bouncey 2s infinite; */
+        /* animation: bounceY 2s infinite, bounceX 2s infinite; */
+        animation: bounceX 3s linear infinite, bounceY 1s ease-out infinite alternate;
+    }
+
+    @keyframes bounceX {
+        from {
+            left: 0%;
+        }
+
+        to {
+            left: 100%;
+        }
+    }
+
+    @keyframes bounceY {
+        from {
+            bottom: 0%;
+        }
+
+        to {
+            bottom: 50%;
+        }
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="ball"></div>
+    </div>
+
+</body>
+
+</html>
