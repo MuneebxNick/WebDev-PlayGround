@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loops</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #333;
+    }
+
+    pre {
+        background-color: #dadada;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    code {
+        font-family: 'Courier New', Courier, monospace;
+        color: #222020;
+        background-color: #ffffff;
+        padding: 2px 4px;
+        border-radius: 4px;
+    }
+
+    ul {
+        list-style-type: square;
+    }
+
+    a {
+        color: #1a73e8;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <h1>Loops - JavaScript</h1>
+    <p>Loops can execute a block of code as long as a specified condition is true.</p>
+    <h2>Types of Loops</h2>
+    <ul>
+        <li><strong>for</strong> - loops through a block of code a number of times</li>
+        <li><strong>for/in</strong> - loops through the properties of an object</li>
+        <li><strong>for/of</strong> - loops through the values of an iterable object</li>
+        <li><strong>while</strong> - loops through a block of code while a specified condition is true</li>
+        <li><strong>do/while</strong> - also loops through a block of code while a specified condition is true</li>
+    </ul>
+    <h2>Examples</h2>
+    <h3>for loop</h3>
+    <pre><code>for (let i = 0; i &lt; 5; i++) {
+    console.log(i);
+}</code></pre>
+    <h3>for/in loop</h3>
+    <pre><code>const person = {fname: "John", lname: "Doe", age: 25};
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}</code></pre>
+    <h3>for/of loop</h3>
+    <pre><code>const arr = [10, 20, 30, 40, 50];
+for (let value of arr) {
+    console.log(value);
+}</code></pre>
+    <h3>while loop</h3>
+    <pre><code>let i = 0;
+while (i &lt; 5) {
+
+    console.log(i);
+    i++;
+}</code></pre>
+    <h3>do/while loop</h3>
+    <pre><code>let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i &lt; 5);</code></pre>
+
+    <h2>Nested Loops</h2>
+    <p>Nested loops are loops inside another loop. They are useful for working with multi-dimensional data structures.
+    </p>
+    <pre><code>for (let i = 0; i &lt; 3; i++) {
+for (let j = 0; j &lt; 2; j++) {
+    console.log(`i: ${i}, j: ${j}`);
+}
+}</code></pre>
+
+    <h2>Loop Control Statements</h2>
+    <p>Control statements can alter the flow of loops:</p>
+    <ul>
+        <li><strong>break</strong> - exits the loop immediately.</li>
+        <li><strong>continue</strong> - skips the current iteration and continues with the next one.</li>
+    </ul>
+    <h3>Using break</h3>
+    <pre><code>for (let i = 0; i &lt; 5; i++) {
+if (i === 3) {
+    break; // exits the loop when i is 3
+}
+console.log(i);
+}</code></pre>
+    <h3>Using continue</h3>
+    <pre><code>for (let i = 0; i &lt; 5; i++) {
+if (i === 2) {
+    continue; // skips the iteration when i is 2
+}
+console.log(i);
+}</code></pre>
+
+    <h2>Looping Through Arrays</h2>
+    <p>Loops are commonly used to iterate over arrays. Here are some examples:</p>
+
+    <h3>Using for loop</h3>
+    <pre><code>const fruits = ["Apple", "Banana", "Cherry"];
+for (let i = 0; i &lt; fruits.length; i++) {
+    console.log(fruits[i]);
+}</code></pre>
+
+    <h3>Using for/in loop</h3>
+    <pre><code>const fruits = ["Apple", "Banana", "Cherry"];
+for (let index in fruits) {
+    console.log(index + ": " + fruits[index]);
+}</code></pre>
+
+    <h3>Using for/of loop</h3>
+    <pre><code>const fruits = ["Apple", "Banana", "Cherry"];
+for (let fruit of fruits) {
+    console.log(fruit);
+}</code></pre>
+
+    <h3>Using while loop</h3>
+    <pre><code>const fruits = ["Apple", "Banana", "Cherry"];
+let i = 0;
+while (i &lt; fruits.length) {
+    console.log(fruits[i]);
+    i++;
+}</code></pre>
+
+    <h3>Using do/while loop</h3>
+    <pre><code>const fruits = ["Apple", "Banana", "Cherry"];
+let i = 0;
+do {
+    console.log(fruits[i]);
+    i++;
+} while (i &lt; fruits.length);</code></pre>
+
+    <h2>Further Reading</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">MDN Web Docs -
+                Loops and iteration</a></li>
+        <li><a href="https://www.w3schools.com/js/js_loop_for.asp">W3Schools - JavaScript For Loop</a></li>
+        <li><a href="https://javascript.info/while-for">JavaScript.info - Loops: while and for</a></li>
+        <li><a href="https://www.freecodecamp.org/news/javascript-loops-explained-with-examples/">freeCodeCamp -
+                JavaScript Loops Explained with Examples</a></li>
+
+    </ul>
+
+
+</body>
+<script src="script.js"></script>
+</html>
