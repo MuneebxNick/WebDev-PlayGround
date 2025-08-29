@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    code {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    p {
+        max-width: 600px;
+    }
+    a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+</style>
+<body>
+    <h1>JavaScript Functions</h1>
+    <p>Functions are blocks of code designed to perform a particular task. They are executed when "called" or "invoked".
+    </p>
+    <h2>Function Declaration</h2>
+    <pre><code>function greet(name) {
+    return "Hello, " + name + "!";
+}</code></pre>
+    <h2>Function Invocation</h2>
+    <pre><code>console.log(greet("Alice")); // Outputs: Hello, Alice!</code></pre>
+    <h2>Function Expression</h2>
+    <pre><code>const add = function(a, b) {
+    return a + b;
+};</code></pre>
+    <h2>Arrow Function</h2>
+    <pre><code>const multiply = (a, b) => a * b;</code></pre>
+    <h2>Example Usage</h2>
+    <pre><code>console.log(add(5, 3)); // Outputs: 8
+console.log(multiply(4, 2)); // Outputs: 8</code></pre>
+    <h2>Function with Default Parameters</h2>
+    <pre><code>function greet(name = "Guest") {
+    return "Hello, " + name + "!";
+}</code></pre>
+    <h2>Example Usage with Default Parameter</h2>
+    <pre><code>console.log(greet()); // Outputs: Hello, Guest!</code></pre>
+    <h2>Function with Rest Parameters</h2>
+    <pre><code>function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}</code></pre>
+    <h2>Example Usage with Rest Parameters</h2>
+    <pre><code>console.log(sum(1, 2, 3, 4)); // Outputs: 10</code></pre>
+
+    <h2>Further Reading</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">MDN Web Docs: Functions</a></li>
+        <li><a href="https://javascript.info/function-basics">JavaScript.info: Function Basics</a></li>
+        <li><a href="https://www.w3schools.com/js/js_functions.asp">W3Schools: JavaScript Functions</a></li>
+        <li><a href="https://eloquentjavascript.net/03_functions.html">Eloquent JavaScript: Functions</a></li>
+        <li><a href="https://www.freecodecamp.org/news/javascript-functions-explained-with-examples/">freeCodeCamp: JavaScript Functions Explained with Examples</a></li>
+
+    </ul>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
