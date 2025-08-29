@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators & JavaScript Conditionals: if, else if, else ladder</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1,
+    h2 {
+        color: #333;
+    }
+
+    pre {
+        background-color: #e8e8e8;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    code {
+        background-color: #e8e8e8;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <h1>Operators in JavaScript</h1>
+    <p>JavaScript provides various operators to perform operations on variables and values. The most common types of
+        operators are:</p>
+    <ul>
+        <li><strong>Arithmetic Operators:</strong> Used to perform mathematical operations.</li>
+        <li><strong>Assignment Operators:</strong> Used to assign values to variables.</li>
+        <li><strong>Comparison Operators:</strong> Used to compare two values.</li>
+        <li><strong>Logical Operators:</strong> Used to combine multiple conditions.</li>
+    </ul>
+
+    <h3>1. Arithmetic Operators</h3>
+    <pre>
+    let a = 10;
+    let b = 5;
+
+    console.log(a + b); // Addition
+    console.log(a - b); // Subtraction
+    console.log(a * b); // Multiplication
+    console.log(a / b); // Division
+    console.log(a % b); // Modulus
+    </pre>
+
+    <h3>2. Assignment Operators</h3>
+    <pre>
+    let x = 10; // Assign
+    x += 5;     // Add and assign
+    console.log(x); // 15
+    x *= 2;     // Multiply and assign
+    console.log(x); // 30
+    </pre>
+
+    <h3>3. Comparison Operators</h3>
+    <pre>
+    let num1 = 10;
+    let num2 = '10';
+
+    console.log(num1 == num2); // true (loose equality)
+    console.log(num1 === num2); // false (value and type check ----- strict equality)
+    console.log(num1 != num2); // false (loose inequality)
+    console.log(num1 !== num2); // true (strict inequality)
+    </pre>
+
+    <h3>4. Logical Operators</h3>
+    <pre>
+    let condition1 = true;
+    let condition2 = false;
+
+    console.log(condition1 && condition2); // false (AND)
+    console.log(condition1 || condition2); // true (OR)
+    console.log(!condition1); // false (NOT)
+    </pre>
+    <h2>If, Else If, Else Ladder</h2>
+    <p>The if, else if, else ladder is used to execute different blocks of code based on multiple conditions. It
+        allows you to check for various conditions sequentially and execute the corresponding block of code for the
+        first true condition.</p>
+    <h3>Syntax</h3>
+    <pre>
+    if (condition1) {
+    // block of code to be executed if condition1 is true
+    } else if (condition2) {
+    // block of code to be executed if condition1 is false and condition2 is true
+    } else {
+    // block of code to be executed if both condition1 and condition2 are false
+    }
+    </pre>
+    <h2>Example</h2>
+    <pre>
+let score = 85;
+if (score >= 90) {
+    console.log("Grade: A");
+} else if (score >= 80) {
+    console.log("Grade: B");
+} else if (score >= 70) {
+    console.log("Grade: C");
+} else if (score >= 60) {
+    console.log("Grade: D");
+} else {
+    console.log("Grade: F");
+}
+    </pre>
+    <p>In this example, the variable <code>score</code> is checked against multiple conditions using an if-else if-else
+        ladder. Depending on the value of <code>score</code>, the appropriate grade is printed to the console.</p>
+    <h2>Notes</h2>
+    <ul>
+        <li>You can have multiple <code>else if</code> statements to check for different conditions.</li>
+        <li>The <code>else</code> statement is optional and can be omitted if not needed.</li>
+        <li>Conditions are evaluated in order, and the first true condition will execute its corresponding block of
+            code.</li>
+        <li>If none of the conditions are true, the code inside the <code>else</code> block will be executed (if it
+            exists).</li>
+    </ul>
+
+    <h2>Ternary Operator</h2>
+    <p>The ternary operator is a shorthand way of writing an if-else statement. It takes three operands: a condition,
+        a value to return if the condition is true, and a value to return if the condition is false.</p>
+    <pre>
+    condition ? value_if_true : value_if_false;
+    </pre>
+    <h2>Example</h2>
+    <pre>
+let age = 18;
+let canVote = (age >= 18) ? "Yes, you can vote." : "No, you cannot vote.";
+console.log(canVote);
+    </pre>
+    <p>In this example, the ternary operator checks if the variable <code>age</code> is greater than or equal to 18.
+        If true, it assigns "Yes, you can vote." to the variable <code>canVote</code>; otherwise, it assigns "No, you
+        cannot vote."</p>
+    <h2>Notes</h2>
+    <ul>
+        <li>The ternary operator is a concise way to write simple conditional statements.</li>
+        <li>It is often used for assigning values based on a condition.</li>
+        <li>For complex conditions or multiple branches, it is better to use if-else statements for readability.</li>
+    </ul>
+
+    <h2>Further Reading:</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">MDN
+                Web Docs: Conditional (Ternary) Operator</a></li>
+        <li><a href="https://www.w3schools.com/js/js_comparisons.asp">W3Schools: JavaScript Comparison Operators</a>
+        </li>
+        <li><a href="https://www.javascripttutorial.net/javascript-if-else/">JavaScript Tutorial: if...else
+                Statement</a></li>
+        <li><a href="https://javascript.info/ifelse">JavaScript.info: if...else</a></li>
+        <li><a href="https://www.freecodecamp.org/news/javascript-ternary-operator/">FreeCodeCamp: JavaScript Ternary
+                Operator</a></li>
+
+    </ul>
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
