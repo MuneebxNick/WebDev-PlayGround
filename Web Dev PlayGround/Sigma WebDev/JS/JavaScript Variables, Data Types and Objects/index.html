@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables, Data Types & Objects</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+        color: #333;
+    }
+
+    code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+    section {
+        margin-top: 20px;
+    }
+    a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+
+</style>
+<body>
+    <h1>JavaScript Variables, Data Types & Objects</h1>
+    <p>This page is under construction. Please check back later for content on JavaScript Variables, Data Types, and Objects.</p>
+    <section>
+        <h2>JavaScript Variables</h2>
+        <p>Variables are containers for storing data values. In JavaScript, you can declare a variable using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+        
+        <h3>Types of Variables</h3>
+        <ul>
+            <li><strong>var:</strong> Declares a variable that can be re-assigned.</li>
+            <li><strong>let:</strong> Declares a block-scoped variable that can be re-assigned.</li>
+            <li><strong>const:</strong> Declares a block-scoped variable that cannot be re-assigned.</li>
+        </ul>
+        <pre><code>
+            var name = "John"; // Using var
+            let age = 30;     // Using let
+            const pi = 3.14;  // Using const
+        </code></pre>
+        <p>Note: It's a good practice to use <code>let</code> and <code>const</code> over <code>var</code> to avoid scope-related issues.</p>
+        <h2>Rules For Naming A Variables</h2>
+        <ul>
+            <li>Variable names must begin with a letter, underscore (_), or dollar sign ($).</li>
+            <li>Subsequent characters can also include digits (0-9).</li>
+            <li>Variable names are case-sensitive (e.g., <code>myVar</code> and <code>myvar</code> are different).</li>
+            <li>Reserved words (like <code>let</code>, <code>const</code>, <code>if</code>, etc.) cannot be used as variable names.</li>
+            <li>Use meaningful names that describe the purpose of the variable.</li>
+        </ul>
+        <p>Example of valid variable names:</p>
+        <pre><code>
+            let firstName;
+            const _age;
+            var $salary;
+            let user1;
+        </code></pre>
+        <p>Example of invalid variable names:</p>
+        <pre><code>
+            let 1stName; // Invalid: starts with a digit
+            const my-age; // Invalid: contains a hyphen
+            var let; // Invalid: reserved word
+        </code></pre>
+        <h2>Global Vs Scoped Variables</h2>
+        <p><strong>Global Variables:</strong> Declared outside any function or block, accessible from anywhere in the code.</p>
+        <pre><code>
+            var globalVar = "I am global";
+
+            function showGlobal() {
+                console.log(globalVar); // Accessible here
+            }
+
+            showGlobal();
+            console.log(globalVar); // Accessible here too
+        </code></pre>
+        <p><strong>Scoped Variables:</strong> Declared within a function or block, accessible only within that function or block.</p>
+        <pre><code>
+            function myFunction() {
+                let scopedVar = "I am scoped";
+                console.log(scopedVar); // Accessible here
+            }
+
+            myFunction();
+            console.log(scopedVar); // Error: scopedVar is not defined
+        </code></pre>
+        <p>Using <code>let</code> and <code>const</code> creates block-scoped variables, meaning they are only accessible within the block they are defined in (e.g., within an <code>if</code> statement or a loop).</p>
+        <pre><code>
+            if (true) {
+                let blockVar = "I am block scoped";
+                console.log(blockVar); // Accessible here
+            }
+
+            console.log(blockVar); // Error: blockVar is not defined
+        </code></pre>
+    </section>
+
+    <section>
+
+        <h2>Data Types</h2>
+        <p>JavaScript has several data types, including:</p>
+        <ul>
+            <li><strong>String:</strong> Represents text, e.g., <code>"Hello, World!"</code></li>
+            <li><strong>Number:</strong> Represents numeric values, e.g., <code>42</code></li>
+            <li><strong>Boolean:</strong> Represents a logical entity and can have two values: <code>true</code> or <code>false</code>.</li>
+            <li><strong>Object:</strong> A collection of properties, e.g., <code>{ name: "John", age: 30 }</code></li>
+            <li><strong>Array:</strong> A special type of object for storing ordered collections, e.g., <code>[1, 2, 3]</code></li>
+            <li><strong>Null:</strong> Represents the intentional absence of any object value.</li>
+            <li><strong>Undefined:</strong> A variable that has been declared but has not yet been assigned a value.</li>
+        </ul>
+
+        <h2>Objects</h2>
+        <p>Objects are a key part of JavaScript and allow you to store collections of data and more complex entities.</p>
+        <pre><code>
+            const person = {
+                name: "Alice",
+                age: 25,
+                greet: function() {
+                    console.log("Hello, " + this.name);
+                }
+            };
+            person.greet(); // Outputs: Hello, Alice
+        </code></pre>
+        <p>In this example, <code>person</code> is an object with properties <code>name</code> and <code>age</code>, and a method <code>greet</code>.</p>
+    </section>
+    <section>
+        <h2>More Reading</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#Variables">MDN Web Docs: Variables</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">MDN Web Docs: Data Structures</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">MDN Web Docs: Working with Objects</a></li>
+            <li><a href="https://javascript.info/object">JavaScript.info: Objects</a></li>
+        </ul>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
