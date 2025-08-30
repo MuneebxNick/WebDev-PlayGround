@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #333;
+    }
+
+    pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    code {
+        font-family: 'Courier New', Courier, monospace;
+        color: #972323;
+        background-color: #f9f2f4;
+        padding: 2px 4px;
+        border-radius: 4px;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    a {
+        color: #326fff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+
+    <h1>JavaScript Arrays</h1>
+    <p>Arrays in JavaScript are used to store multiple values in a single variable. They are dynamic and can hold
+        different data types.</p>
+
+    <h2>Creating an Array</h2>
+    <pre><code>let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits); // Output: ["Apple", "Banana", "Cherry"]
+</code></pre>
+
+    <h2>Accessing Array Elements</h2>
+    <pre><code>console.log(fruits[0]); // Output: "Apple"
+console.log(fruits[1]); // Output: "Banana"
+console.log(fruits[2]); // Output: "Cherry"
+</code></pre>
+
+    <h2>Array Methods</h2>
+    <h3>push()</h3>
+    <pre><code>fruits.push("Orange");
+console.log(fruits); // Output: ["Apple", "Banana", "Cherry", "Orange"]
+</code></pre>
+
+    <h3>pop()</h3>
+    <pre><code>fruits.pop();
+console.log(fruits); // Output: ["Apple", "Banana", "Cherry"]
+</code></pre>
+
+    <h3>shift()</h3>
+    <pre><code>fruits.shift();
+console.log(fruits); // Output: ["Banana", "Cherry"]
+</code></pre>
+
+    <h3>unshift()</h3>
+    <pre><code>fruits.unshift("Mango");
+console.log(fruits); // Output: ["Mango", "Banana", "Cherry"]
+</code></pre>
+
+    <h3>length</h3>
+    <pre><code>console.log(fruits.length); // Output: 3
+</code></pre>
+    <h3>forEach()</h3>
+    <pre><code>fruits.forEach(function(item, index) {
+    console.log(index + ": " + item);
+});
+// Output:
+// 0: Mango
+// 1: Banana
+// 2: Cherry
+</code></pre>
+
+    <h3>map()</h3>
+    <pre><code>let upperFruits = fruits.map(function(item) {
+    return item.toUpperCase();
+});
+console.log(upperFruits); // Output: ["MANGO", "BANANA", "CHERRY"]
+</code></pre>
+
+    <h3>filter()</h3>
+    <pre><code>let filteredFruits = fruits.filter(function(item) {
+    return item.startsWith("B");
+});
+console.log(filteredFruits); // Output: ["Banana"]
+</code></pre>
+
+    <h3>find()</h3>
+    <pre><code>let foundFruit = fruits.find(function(item) {
+    return item === "Cherry";
+});
+console.log(foundFruit); // Output: "Cherry"
+</code></pre>
+
+    <h3>sort()</h3>
+    <pre><code>fruits.sort();
+console.log(fruits); // Output: ["Banana", "Cherry", "Mango"]
+</code></pre>
+
+    <h3>reverse()</h3>
+    <pre><code>fruits.reverse();
+console.log(fruits); // Output: ["Mango", "Cherry", "Banana"]
+</code></pre>
+
+    <h2>Multidimensional Arrays</h2>
+    <pre><code>let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+console.log(matrix[0][0]); // Output: 1
+console.log(matrix[1][2]); // Output: 6
+console.log(matrix[2][1]); // Output: 8
+</code></pre>
+
+    <h2>Conclusion</h2>
+    <p>Arrays are a fundamental part of JavaScript and provide a powerful way to store and manipulate collections of
+        data. With various built-in methods, you can easily perform operations like adding, removing, and iterating over
+        elements.</p>
+
+    <h2>Further Reading</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                target="_blank">MDN Web Docs: Array</a></li>
+        <li><a href="https://javascript.info/array" target="_blank">JavaScript.info: Arrays</a></li>
+        <li><a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">W3Schools: JavaScript Arrays</a></li>
+        <li><a href="https://www.freecodecamp.org/news/javascript-arrays-explained-with-examples/"
+                target="_blank">FreeCodeCamp: JavaScript Arrays Explained with Examples</a></li>
+        <li><a href="https://www.geeksforgeeks.org/arrays-in-javascript/" target="_blank">GeeksforGeeks: Arrays in
+                JavaScript</a></li>
+        <li><a href="https://www.tutorialspoint.com/javascript/javascript_arrays.htm" target="_blank">TutorialsPoint:
+                JavaScript Arrays</a></li>
+        <li><a href="https://www.javascripttutorial.net/javascript-array/" target="_blank">JavaScript Tutorial:
+                JavaScript Array</a></li>
+    </ul>
+
+</body>
+<script src="script.js">
+
+    // console.log(arr);
+    // console.log(arr.length);
+
+
+    // console.log(arr[0]);
+    // console.log(arr[1]);
+    // console.log(arr[2]);
+    // console.log(arr[3]);
+    // console.log(arr[4]);
+    // console.log(arr[5]); // undefined
+
+    // console.log(arr.toString())
+
+    // console.log(arr.join(" and "))
+
+    // arr.pop();
+
+    // arr.push("Muneeb");
+
+    // arr.shift();
+
+    // arr.unshift("Muneeb");
+
+    // delete arr[5]
+
+    // let a1 = [1, 2, 3, 4, 5];
+    // let a2 = ["Muneeb", "Ali", "Ahmed"];
+    // let a3 = ["Alvi", "Developer", "Pakistan"];
+
+    // let a = a1.concat(a2, a3);
+    // // console.log(a1);
+    // console.log(a);
+
+    // arr.splice(1, 3)
+
+    // arr.splice(1, 3, 266, 899)
+    // console.log(arr);
+
+    // arr.slice(1, 5);
+    // console.log(arr);
+
+    // arr.reverse();
+    // console.log(arr);
+</script>
+
+</html>
