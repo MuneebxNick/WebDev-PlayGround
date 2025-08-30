@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bussiness Name Generator</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let rand = Math.random();
+
+    let first, second, third;
+
+    //Adjectives
+    if (rand < 0.33) {
+        first = "Crazy";
+    }
+    else if (rand < 0.66 && rand >= 0.33) {
+        first = "Amazing";
+    }
+    else {
+        first = "Fire";
+    }
+
+    //Shope Name
+    if (rand < 0.33) {
+        second = "Engine";
+    }
+    else if (rand < 0.66 && rand >= 0.33) {
+        second = "Food";
+    }
+    else {
+        second = "Garments";
+    }
+
+    // Another Word
+    if (rand < 0.33) {
+        third = "Bros";
+    }
+    else if (rand < 0.66 && rand >= 0.33) {
+        third = "Limited";
+    }
+    else {
+        third = "Hub";
+    }
+
+
+    console.log(`${first} ${second} ${third}`);
+
+
+
+
+
+
+    const adjectives = ["Creative", "Innovative", "Dynamic", "Visionary", "Strategic"];
+    const nouns = ["Solutions", "Concepts", "Ventures", "Enterprises", "Technologies"];
+
+    function getRandomElement(arr) {
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        // console.log(randomIndex);
+        return arr[randomIndex];
+    }
+
+    function generateBusinessName() {
+        const adjective = getRandomElement(adjectives);
+        const noun = getRandomElement(nouns);
+        return `${adjective} ${noun}`;
+    }
+
+    console.log("Generated Business Name:", generateBusinessName());
+</script>
+
+</html>
