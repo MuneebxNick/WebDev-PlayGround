@@ -154,7 +154,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
-    margin: 0.5rem;
+    margin: 3rem 0.5rem;
 }
 
 .primary-btn {

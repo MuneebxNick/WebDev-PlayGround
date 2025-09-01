@@ -114,12 +114,11 @@ class TypeWriter {
 function initTypeWriter() {
     const txtElement = document.querySelector('.typed-text');
     const words = [
-        'Web Developer',
-        'Flutter Developer',
+        'Front-End Web Developer',
         'Programmer',
         'Web Designer',
-        'UI/UX Designer',
-        'Full Stack Developer',
+        'Poet',
+        'Teacher'
 
     ];
     const wait = 500;
