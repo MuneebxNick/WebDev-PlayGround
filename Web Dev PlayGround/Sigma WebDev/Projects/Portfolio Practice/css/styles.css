@@ -181,14 +181,19 @@ body {
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: center;
 }
 
 .about-image img {
     width: 100%;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+    height: auto;
+    /* Adjust height automatically */
+    object-fit: contain;
+    /* Ensure the entire image is visible */
+    border-radius: 0;
+    box-shadow: none;
+    /* Remove shadow */
 }
 
 .skill-grid {
@@ -333,14 +338,16 @@ body {
 
 /* Contact Section */
 .contact {
-    min-height: 500px; /* Set a minimum height */
-    padding: 50px 0; /* Adjust padding as needed */
+    min-height: 500px;
+    /* Set a minimum height */
+    padding: 50px 0;
+    /* Adjust padding as needed */
 }
 
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
 }
 
 .contact-form input,
@@ -756,4 +763,22 @@ body.menu-open {
         background: var(--bg-color);
         z-index: 1000;
     }
+}
+
+.about h2 {
+    margin-bottom: 1rem;
+    /* Reduced space */
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contact h2 {
+    margin-bottom: 2rem;
+    /* Added space below heading */
 }

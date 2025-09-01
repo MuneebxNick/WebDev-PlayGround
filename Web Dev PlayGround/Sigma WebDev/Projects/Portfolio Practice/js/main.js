@@ -19,17 +19,6 @@ function initTheme() {
     }
 }
 
-themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    themeToggle.innerHTML = newTheme === 'dark'
-        ? '<i class="fas fa-sun"></i>'
-        : '<i class="fas fa-moon"></i>';
-});
-
 // Hamburger Menu Functionality
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
@@ -192,10 +181,36 @@ backToTop.addEventListener('click', () => {
 // Form Handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        alert('Thank you! Your message has been sent.');
-        contactForm.reset();
+
+        const form = e.target;
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                alert('Thank you! Your message has been sent.');
+                form.reset();
+            } else {
+                const data = await response.json();
+                if (data.errors) {
+                    alert(data.errors.map(error => error.message).join(", "));
+                } else {
+                    alert('Oops! There was an error sending your message.');
+                }
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('Oops! There was an error sending your message.');
+        }
     });
 }
 
@@ -240,28 +255,21 @@ function updateActiveLink() {
 window.addEventListener('scroll', updateActiveLink);
 
 // Theme toggle functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.querySelector('.theme-toggle');
-    
-    // Check for saved theme preference or default to light
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        // Update theme
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
-});
-
 function updateThemeIcon(theme) {
     const themeToggle = document.querySelector('.theme-toggle');
-    themeToggle.innerHTML = theme === 'light' 
-        ? '<i class="moon-icon fas fa-moon"></i>' 
+    themeToggle.innerHTML = theme === 'light'
+        ? '<i class="moon-icon fas fa-moon"></i>'
         : '<i class="sun-icon fas fa-sun"></i>';
 }
+
+// Initialize theme and attach event listener
+initTheme();
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+});
