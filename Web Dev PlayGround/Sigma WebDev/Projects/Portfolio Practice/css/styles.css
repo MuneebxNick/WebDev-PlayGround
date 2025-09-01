@@ -9,6 +9,9 @@
     --gray-dark: #4b5563;
     --transition: all 0.3s ease;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    /* Gradient Colors */
+    --gradient-start: #e0f2fe;
+    --gradient-end: #bfdbfe;
 }
 
 /* Dark Theme Colors */
@@ -18,6 +21,9 @@
     --accent-color: #1e3a8a;
     --gray-light: #1f2937;
     --gray-dark: #d1d5db;
+    /* Gradient Colors - Dark Theme */
+    --gradient-start: #1e3a8a;
+    --gradient-end: #0f172a;
 }
 
 * {
@@ -128,7 +134,8 @@ body {
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--bg-color) 100%);
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    background-size: 200% 200%;
 }
 
 .hero-content h1 {

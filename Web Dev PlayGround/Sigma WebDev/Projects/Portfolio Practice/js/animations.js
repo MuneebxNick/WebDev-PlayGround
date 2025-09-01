@@ -64,6 +64,15 @@ gsap.from('.cta-buttons', {
     ease: 'power4.out'
 });
 
+// Hero Background Gradient Animation
+gsap.to('.hero', {
+    backgroundPosition: '200% 0%',
+    duration: 10,
+    ease: 'none',
+    repeat: -1,
+    yoyo: true
+});
+
 // Navbar Animation
 gsap.from('.navbar', {
     y: -100,
@@ -148,7 +157,7 @@ document.querySelectorAll('.btn').forEach(btn => {
         const rect = btn.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         gsap.to(btn, {
             duration: 0.3,
             x: (x - rect.width / 2) / rect.width * 20,
