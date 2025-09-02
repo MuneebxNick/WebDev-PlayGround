@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM - Children, Parent & Sibling Nodes</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: #e2e2e2;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 3px;
+    }
+</style>
+<body>
+    <h1>JavaScript DOM - Children, Parent & Sibling Nodes</h1>
+    <div class="container">
+        <h2>Vegetables</h2>
+        <ul>
+            <li>Carrot</li>
+            <li>Broccoli</li>
+            <li>Spinach</li>
+            <li>Potato</li>
+        </ul>
+    </div>
+    
+
+</body>
+<script src="script.js">
+    // Accessing the parent node
+    const ulElement = document.querySelector('ul');
+    console.log('Parent Node:', ulElement.parentNode);
+
+    // Accessing child nodes
+    const childNodes = ulElement.childNodes;
+    console.log('Child Nodes:', childNodes);
+
+    // Accessing children (element nodes only)
+    const children = ulElement.children;
+    console.log('Children:', children);
+
+    // Accessing first and last child
+    console.log('First Child:', ulElement.firstChild);
+    console.log('Last Child:', ulElement.lastChild);
+
+    // Accessing first and last element child
+    console.log('First Element Child:', ulElement.firstElementChild);
+    console.log('Last Element Child:', ulElement.lastElementChild);
+
+    // Accessing sibling nodes
+    const firstLi = ulElement.firstElementChild;
+    console.log('Next Sibling of First LI:', firstLi.nextSibling);
+    console.log('Next Element Sibling of First LI:', firstLi.nextElementSibling);
+    console.log('Previous Sibling of First LI:', firstLi.previousSibling);
+    console.log('Previous Element Sibling of First LI:', firstLi.previousElementSibling);
+</script>
+
+</html>
