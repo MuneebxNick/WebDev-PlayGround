@@ -6,21 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Dom & Bom</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #demoOutput {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e2e2e2;
+        border-radius: 5px;
+    }
+    #elementContainer p {
+        background-color: #d1ecf1;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    
+</style>
 
 <body>
+    <h1>JavaScript Dom & Bom</h1>
+    <p>This page demonstrates the Document Object Model (DOM) and Browser Object Model (BOM) in JavaScript.</p>
+    <button id="demoButton">Click me to see a DOM example</button>
+    <div id="demoOutput"></div>
+    <h2>Theory of DOM and BOM</h2>
+    <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a
+        document as a tree of objects, allowing programming languages to manipulate the content, structure, and style of
+        web pages dynamically.</p>
+    <p>The Browser Object Model (BOM) provides interaction with the browser itself. It allows developers to control the
+        browser window, navigate between pages, and access browser-specific features.</p>
+    <p>Understanding both DOM and BOM is crucial for creating interactive and dynamic web applications.</p>
+    <h2>Additional DOM Manipulation Examples</h2>
+    <button id="addElementButton">Add a New Element</button>
+    <button id="removeElementButton">Remove Last Element</button>
+    <div id="elementContainer"></div>
 
-    <h1 id="heading">Hello World</h1>
-    <button id="btn">Click Me</button>
-    <a href="https://www.google.com" target="_blank" id="link">Go to Google</a>
-    <br>
-    <input type="text" id="input" placeholder="Type something...">
-    <br>
-    <img src="https://via.placeholder.com/150" alt="Placeholder Image" id="image">
-    <br>
-    <div id="box" style="width:100px; height:100px; background-color:lightblue; margin-top:10px;"></div>
-    <br>
-    
+   
+    <h2>Further Reading</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">MDN Web Docs: Document Object Model (DOM)</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">MDN Web Docs: Window (BOM)</a></li>
+        <li><a href="https://www.w3schools.com/js/js_htmldom.asp">W3Schools: JavaScript HTML DOM</a></li>
+        <li><a href="https://www.w3schools.com/js/js_window.asp">W3Schools: JavaScript BOM</a></li> 
+        <li><a href="https://javascript.info/dom-nodes">JavaScript.info: DOM Nodes</a></li>
+    </ul>
+
 </body>
-<script src="script.js"></script>
+<script>
+    document.getElementById('demoButton').addEventListener('click', function () {
+        document.getElementById('demoOutput').innerText = 'You clicked the button! This is a DOM manipulation example.';
+    });
+
+    document.getElementById('addElementButton').addEventListener('click', function () {
+        const newElement = document.createElement('p');
+        newElement.innerText = 'This is a new paragraph added to the DOM.';
+        document.getElementById('elementContainer').appendChild(newElement);
+    });
+
+    document.getElementById('removeElementButton').addEventListener('click', function () {
+        const container = document.getElementById('elementContainer');
+        if (container.lastChild) {
+            container.removeChild(container.lastChild);
+        }
+    });
+</script>
 
 </html>
