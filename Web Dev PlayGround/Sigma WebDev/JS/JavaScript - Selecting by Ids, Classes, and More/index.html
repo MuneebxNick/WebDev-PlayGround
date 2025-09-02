@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Selecting by Ids, Classes, and More</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+    }
+    a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+</style>
+
+<body>
+    <h1>JavaScript - Selecting by Ids, Classes, and More</h1>
+    <h2>JavaScript provides several methods to select HTML elements based on their IDs, classes, tags, and other attributes. Here are some of the most commonly used methods:</h2>
+    <h3>1. Selecting by ID</h3>
+    <p>The <code>getElementById</code> method is used to select a single element by its unique ID.</p>
+    <pre><code>const element = document.getElementById('myId');</code></pre>
+    <h3>2. Selecting by Class Name</h3>
+    <p>The <code>getElementsByClassName</code> method returns a live HTMLCollection of all elements with the specified class name.</p>
+    <h3>3. Selecting by Tag Name</h3>
+    <p>The <code>getElementsByTagName</code> method returns a live HTMLCollection of all elements with the specified tag name.</p>
+    <pre><code>const elements = document.getElementsByTagName('div');</code></pre>
+    <h3>4. Selecting by CSS Selectors</h3>
+    <p>The <code>querySelector</code> method returns the first element that matches a specified CSS selector, while <code>querySelectorAll</code> returns a static NodeList of all matching elements.</p>
+    <pre><code>const firstElement = document.querySelector('.myClass');
+const allElements = document.querySelectorAll('.myClass');</code></pre>
+    <h3>5. Selecting by Name Attribute</h3>
+    <p>The <code>getElementsByName</code> method returns a live NodeList of all elements with the specified name attribute.</p>
+    <pre><code>const elements = document.getElementsByName('myName');</code></pre>
+    <h2>Example Usage</h2>
+    <pre><code>&lt;div id="myId" class="myClass"&gt;Hello&lt;/div&gt;
+&lt;div class="myClass"&gt;World&lt;/div&gt;
+&lt;input type="text" name="myName" /&gt;
+&lt;input type="text" name="myName" /&gt;
+&lt;script&gt;
+  const elementById = document.getElementById('myId');
+  const elementsByClass = document.getElementsByClassName('myClass');
+  const elementsByTag = document.getElementsByTagName('div');
+  const firstElementBySelector = document.querySelector('.myClass');
+  const allElementsBySelector = document.querySelectorAll('.myClass');
+  const elementsByName = document.getElementsByName('myName');
+
+  console.log(elementById); // &lt;div id="myId" class="myClass"&gt;Hello&lt;/div&gt;
+  console.log(elementsByClass); // HTMLCollection(2) [div.myClass, div.myClass]
+  console.log(elementsByTag); // HTMLCollection(2) [div#myId.myClass, div.myClass]
+  console.log(firstElementBySelector); // &lt;div id="myId" class="myClass"&gt;Hello&lt;/div&gt;
+  console.log(allElementsBySelector); // NodeList(2) [div#myId.myClass, div.myClass]
+  console.log(elementsByName); // NodeList(2) [input[name="myName"], input[name="myName"]]
+&lt;/script&gt;</code></pre>
+
+<h2>Further Reading</h2>
+<p>For more information, you can refer to the following resources:</p>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank">MDN Web Docs: getElementById</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName" target="_blank">MDN Web Docs: getElementsByClassName</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName" target="_blank">MDN Web Docs: getElementsByTagName</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank">MDN Web Docs: querySelector</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" target="_blank">MDN Web Docs: querySelectorAll</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName" target="_blank">MDN Web Docs: getElementsByName</a></li>
+</ul>
+
+</body>
+<script src="script.js"></script>
+</html>
