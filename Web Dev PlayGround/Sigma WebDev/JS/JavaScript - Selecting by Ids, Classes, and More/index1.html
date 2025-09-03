@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<style>
+    body {
+        background-color: lightblue;
+    }
+
+    .box {
+        width: 34px;
+        height: 34px;
+        margin: 24px;
+        padding: 34px;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div id="red" class="box">Box2.5</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+    </div>
+</body>
+<script>
+    console.log("Muneeb");
+
+    // let Boxes = document.getElementsByClassName("box");
+    // console.log(Boxes);
+    // Boxes[2].style.backgroundColor = "green";
+
+    // let redBox = document.getElementById("red");
+    document.getElementById("red").style.backgroundColor = "red";
+    document.querySelector(".box").style.backgroundColor = "yellow"; // it changes the first selecter who matched to it
+
+    document.querySelectorAll(".box").forEach(element => { // it changes all the selecters who matched to it
+        element.style.backgroundColor = "purple";
+    });
+
+    let e = document.getElementsByTagName("div")
+    console.log(e);
+
+    e[4].matches("red")
+
+    e[4].closest("red")
+
+    e[4].closest(".container")
+
+    e[4].closest("body")
+
+    console.log(e[4].innerText);
+
+    let r = document.querySelector(".container").contains(e[4])
+    console.log(r);
+
+    r = document.querySelector(".container").contains(document.querySelector("body"))
+    console.log(r);
+
+    r = document.querySelector("body").contains(document.querySelector(".container"))
+    console.log(r);
+
+
+</script>
+
+</html>
