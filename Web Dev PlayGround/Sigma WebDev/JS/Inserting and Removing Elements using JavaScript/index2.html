@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Other Dom Properties</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    .container {
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>Events and Other Dom Properties</h1>
+
+    <div class="container">
+        <div class="box" style="display: flex;" data-createdby="Muneeb">
+            Hey I am a Box
+        </div>
+        <div class="box">
+            Hey I am a Box
+        </div>
+    </div>
+
+</body>
+<script>
+
+    // Insertion Method
+
+    let div = document.createElement("div") // it creates a div element
+    div.innerText = "Hey I am a new div" // it sets the inner text of the div element
+    document.querySelector(".container").append(div) // it appends the div element to the container class
+
+    document.querySelector(".container").prepend(div) // it prepends the div element to the container class
+
+    // document.querySelector(".container").before(div) // it inserts the div element before the container class
+
+    // document.querySelector(".container").after(div) // it inserts the div element after the container class
+
+    // document.querySelector(".container").replaceWith(div) // it replaces the container class with the div element
+
+    // document.querySelector(".container").appendChild(div) // it appends the div element to the container class
+
+    // document.querySelector(".container").insertAdjacentElement("beforebegin", div) // it inserts the div element before the container class
+
+    // document.querySelector(".container").insertAdjacentElement("afterbegin", div) // it inserts the div element at the beginning of the container class
+    // document.querySelector(".container").insertAdjacentElement("beforeend", div) // it inserts the div element at the end of the container class    
+    // document.querySelector(".container").insertAdjacentElement("afterend", div) // it inserts the div element after the container class
+
+    document.querySelector(".container").insertAdjacentHTML("beforebegin", "<div>Hey I am a new div</div>") // it inserts the html element before the container class
+
+    document.querySelector(".container").insertAdjacentHTML("afterbegin", "<div>Hey I am a new after div</div>") // it inserts the html element at the beginning of the container class
+
+    document.querySelector(".container").insertAdjacentHTML("beforeend", "<div>Hey I am a new beforeend div</div>") // it inserts the html element at the end of the container class
+
+    document.querySelector(".container").insertAdjacentHTML("afterend", "<div>Hey I am a new afterend div</div>") // it inserts the html element after the container class
+
+    // document.querySelector(".container").cloneNode(true) // it clones the container class with all its child elements if true is passed otherwise it clones only the container class if false is passed
+
+    // document.querySelector(".container").cloneNode(false) // it clones the container class only without its child elements
+
+    // Removal Method
+
+    document.querySelector(".box").remove() // it removes the first element of class box
+
+    // More Methods
+
+    document.querySelector(".container").classList // it returns the class list of the container class
+
+    document.querySelector(".container").classList.contains("container") // it checks if the container class contains the class name container and return boolean value
+
+    document.querySelector(".container").classList.add("new-class") // it adds a new class to the container class
+
+    document.querySelector(".container").classList.remove("new-class") // it removes the class from the container class
+
+    document.querySelector(".container").classList.toggle("new-class") // it toggles the class in the container class if the class is present it removes it otherwise it adds it
+
+    document.querySelector(".container").className// it returns the class name of the container class
+
+
+
+
+    document.querySelector(".box")
+
+    document.querySelector(".box").innerHTML
+
+    document.querySelector(".container").innerHTML
+
+    document.querySelector(".box").innerText
+
+    document.querySelector(".container").innerText
+
+    document.querySelector(".container").outerHTML
+
+    document.querySelector(".container").tagName // applicable to tags only
+
+    document.querySelector(".container").nodeName // applicable to any node or tag like cmnt text div etc
+
+    document.querySelector(".container").textContent
+
+    document.querySelector(".box").hidden = true  // it adds hidden attribute to tag and if we set true so it hides the element
+
+    document.querySelector(".box").hidden = false // it removes hidden attribute to tag and if we set false so it shows the element
+
+    document.querySelector(".box").innerHTML = "Hey i am nick" // it replaces the inner html of the element first element of class box
+
+    // ATTRIBUTES METHOD
+
+    document.querySelector(".box").hasAttribute("style") // it checks if the element has the attribute or not and return boolean value
+
+
+    document.querySelector(".box").getAttribute("style") // it returns the value of the attribute 
+
+    document.querySelector(".box").setAttribute("style", "color:red") // it sets the value of the attribute if the attribute is not present it creates the attribute and set the value
+
+    document.querySelector(".box").attributes // it returns all the attributes of the element in the form of a collection
+
+    document.querySelector(".box").removeAttribute("style") // it removes the attribute from the element
+
+    document.designMode = 'on' // it makes the whole document editable
+
+    document.designMode = 'off' // it makes the whole document non editable
+
+    // Data Attributes
+
+    document.querySelector(".box").setAttribute("data-custom", "12345") // it sets the value of the data attribute
+
+    document.querySelector(".box").getAttribute("data-custom") // it gets the value of the data attribute
+
+    document.querySelector(".box").dataset.custom // it gets the value of the data attribute using dataset property
+
+    document.querySelector(".box").dataset // it returns all the data attributes of the element in the form of an object
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

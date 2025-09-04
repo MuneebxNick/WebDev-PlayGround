@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting and Removing Elements using JavaScript</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    #container {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-right: 10px;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #f0f0f0;
+    }
+</style>
+
+<body>
+    <h1>Inserting and Removing Elements - JavaScript</h1>
+    <div id="container">
+        <p>This is a paragraph inside the container.</p>
+    </div>
+    <button onclick="insertElement()">Insert Element</button>
+    <button onclick="removeElement()">Remove Element</button>
+
+    <h2>Further Reading</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">MDN Web Docs:
+                Introduction to the DOM</a></li>
+        <li><a href="https://www.w3schools.com/js/js_htmldom_nodes.asp">W3Schools: HTML DOM Nodes</a></li>
+        <li><a href="https://javascript.info/modifying-document">JavaScript.info: Modifying the Document</a></li>
+        <li><a href="https://www.freecodecamp.org/news/dom-manipulation-in-javascript/">FreeCodeCamp: DOM Manipulation
+                in JavaScript</a></li>
+    </ul>
+</body>
+<script>
+    function insertElement() {
+        // Create a new paragraph element
+        const newParagraph = document.createElement("p");
+        newParagraph.textContent = "This is a newly inserted paragraph.";
+
+        // Append the new paragraph to the container
+        const container = document.getElementById("container");
+        container.appendChild(newParagraph);
+    }
+
+    function removeElement() {
+        // Remove the last paragraph from the container if it exists
+        const container = document.getElementById("container");
+        const paragraphs = container.getElementsByTagName("p");
+        if (paragraphs.length > 0) {
+            container.removeChild(paragraphs[paragraphs.length - 1]);
+        } else {
+            alert("No more paragraphs to remove!");
+        }
+    }
+</script>
+
+</html>
