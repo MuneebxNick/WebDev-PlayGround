@@ -1,9 +1,10 @@
 console.log("Script loaded");
 
-// "Harray`s Method"
 // let boxes = document.querySelectorAll(".box");
 // let boxes = document.getElementsByClassName("box");
 // let boxes = document.getElementsByTagName("div");
+
+// "Harray`s Method"
 
 let boxes = document.querySelector(".container").children;
 

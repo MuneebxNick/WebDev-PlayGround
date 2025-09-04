@@ -10,14 +10,47 @@ const navLinksItems = document.querySelectorAll('.nav-links a');
 
 // Theme Toggle
 function initTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Always set the light theme by default
+    document.documentElement.setAttribute('data-theme', 'light');
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>'; // Show moon icon for light theme
 
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    // Check for saved theme only after setting default, to allow user override
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Show sun icon for dark theme
     }
 }
+
+// Theme toggle functionality
+function updateThemeIcon(theme) {
+    // Use the globally defined themeToggle DOM element, avoiding redundant DOM queries.
+    themeToggle.innerHTML = theme === 'light'
+        ? '<i class="moon-icon fas fa-moon"></i>'
+        : '<i class="sun-icon fas fa-sun"></i>';
+}
+
+// Initialize theme (the `initTheme` function is defined outside this selection).
+// As per the instructions, `initTheme` is expected to set the default theme to 'light'
+// and ignore device preferences, only respecting a user's saved preference if it's 'dark'.
+initTheme();
+
+// After `initTheme` has run and determined the final theme (which could be 'light' by default
+// or 'dark' if a preference was saved), explicitly call `updateThemeIcon`.
+// This ensures that the theme toggle icon accurately reflects the current theme state
+// using the `updateThemeIcon` helper function, making it the single source of truth for icon display.
+const currentInitialTheme = document.documentElement.getAttribute('data-theme');
+updateThemeIcon(currentInitialTheme);
+
+// Attach event listener for theme toggle functionality.
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme); // Save the user's preference
+    updateThemeIcon(newTheme); // Update the icon to match the new theme
+});
 
 // Hamburger Menu Functionality
 document.addEventListener('DOMContentLoaded', () => {
@@ -253,22 +286,3 @@ function updateActiveLink() {
 // Call updateActiveLink on scroll
 window.addEventListener('scroll', updateActiveLink);
 
-// Theme toggle functionality
-function updateThemeIcon(theme) {
-    const themeToggle = document.querySelector('.theme-toggle');
-    themeToggle.innerHTML = theme === 'light'
-        ? '<i class="moon-icon fas fa-moon"></i>'
-        : '<i class="sun-icon fas fa-sun"></i>';
-}
-
-// Initialize theme and attach event listener
-initTheme();
-
-themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-});
