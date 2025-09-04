@@ -6,11 +6,12 @@ Welcome to my **Web Development Playground**! This repository is a collection of
 This repository serves as a comprehensive showcase of my web development journey. It includes various projects that highlight my proficiency in front-end and back-end technologies. Each project is designed to demonstrate different skills, from responsive design to dynamic web applications. 
 
 Feel free to explore the individual project folders for detailed documentation, source code, and live demos where applicable. Your feedback and contributions are highly appreciated as I continue to learn and grow in this field!
-<!-- ## 📝 About Me
+
+ ## 📝 About Me
 
 I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. My journey in web development began with learning HTML and CSS, and I have since expanded my skill set to include JavaScript, frameworks like React, and back-end technologies such as Node.js.
 
-### 🌱 Learning Goals
+ ### 🌱 Learning Goals
 
 - Improve my understanding of JavaScript frameworks.
 - Explore back-end development with Express.js and databases.
@@ -20,23 +21,23 @@ I am a passionate web developer with a keen interest in creating dynamic and res
 
 Feel free to reach out through my social media or email:
 
-- **Twitter:** [@yourusername](https://twitter.com/yourusername)
-- **LinkedIn:** [Your Name](https://linkedin.com/in/yourname)
-- **Email:** your.email@example.com -->
+- **Instagram:** https://www.instagram.com/dev._nick
+- **LinkedIn:** www.linkedin.com/in/hafiz-muneeb-ul-hassan-478a28310
+- **Email:** muneebalvi125@gmail.com
 
-<!-- ## 🚀 Projects
+ ## 🚀 Projects
 
 ### 1. Personal Portfolio
 
 A personal portfolio website to showcase my work and skills.
 
 - **🛠 Technologies Used:** HTML, CSS, JavaScript
-<!-- - **🌍 Live Demo:** [View Demo](#) -->
-<!-- - **📦 Source Code:** [View Repository](#)
+- **🌍 Live Demo:** https://muneeb-ul-hassan.vercel.app/
+- **📦 Source Code:** https://github.com/MuneebxNick/my-Portfolio
 
 ---
 
-### 2. Responsive Blog
+<!-- ### 2. Responsive Blog
 
 A responsive blog template that adapts to different screen sizes.
 
