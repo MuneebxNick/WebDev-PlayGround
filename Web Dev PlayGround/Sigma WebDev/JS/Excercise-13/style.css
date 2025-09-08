@@ -13,6 +13,7 @@ h1 {
 .container {
     /* position: relative; */
     width: 60vw;
+    margin: 18px;
     /* height: 10vw; */
     /* border: 2px solid black; */
     display: flex;
@@ -65,8 +66,8 @@ p {
     right: 8px;
     background-color: rgba(37, 37, 37, 0.596);
     color: white;
-    padding: 0 5px;
-    font-size: 14px;
+    padding: 0px 8px;
+    font-size: 12px;
     border-radius: 8px;
     z-index: 10;
     font-weight: bold;

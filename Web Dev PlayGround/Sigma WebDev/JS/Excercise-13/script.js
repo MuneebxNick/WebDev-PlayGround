@@ -43,6 +43,52 @@ createCard(
     '31:22',
     'https://i.ytimg.com/vi/NoWRBo3Uf8E/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLA2mDiQbqxLuGC5OvTUpJDv8seDmg'
 );
+
+createCard(
+    'JavaScript Callbacks & Promises | Sigma Web Development Course - Tutorial #75',
+    'CodeWithHarry',
+    560000,
+    7,
+    '31:22',
+    'https://i.ytimg.com/vi/NoWRBo3Uf8E/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLA2mDiQbqxLuGC5OvTUpJDv8seDmg'
+);
+
+createCard(
+    'JavaScript Callbacks & Promises | Sigma Web Development Course - Tutorial #75',
+    'CodeWithHarry',
+    560000,
+    7,
+    '31:22',
+    'https://i.ytimg.com/vi/NoWRBo3Uf8E/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLA2mDiQbqxLuGC5OvTUpJDv8seDmg'
+);
+
+createCard(
+    'JavaScript Callbacks & Promises | Sigma Web Development Course - Tutorial #75',
+    'CodeWithHarry',
+    560000,
+    7,
+    '31:22',
+    'https://i.ytimg.com/vi/NoWRBo3Uf8E/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLA2mDiQbqxLuGC5OvTUpJDv8seDmg'
+);
+
+createCard(
+    'JavaScript Callbacks & Promises | Sigma Web Development Course - Tutorial #75',
+    'CodeWithHarry',
+    560000,
+    7,
+    '31:22',
+    'https://i.ytimg.com/vi/NoWRBo3Uf8E/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLA2mDiQbqxLuGC5OvTUpJDv8seDmg'
+);
+
+createCard(
+    'JavaScript Callbacks & Promises | Sigma Web Development Course - Tutorial #75',
+    'CodeWithHarry',
+    560000,
+    7,
+    '31:22',
+    'https://i.ytimg.com/vi/NoWRBo3Uf8E/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLA2mDiQbqxLuGC5OvTUpJDv8seDmg'
+);
+
 createCard(
     'JavaScript Callbacks & Promises | Sigma Web Development Course - Tutorial #75',
     'CodeWithHarry',
