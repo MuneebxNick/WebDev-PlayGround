@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events, Event Bubbling, setInterval & setTimeout</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f0f0f0;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    #grandparent,
+    #parent,
+    #child {
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    #grandparent {
+        border: 2px solid black;
+        background-color: #e0e0e0;
+    }
+
+    #parent {
+        border: 2px solid blue;
+        background-color: #d0e7ff;
+    }
+
+    #child {
+        border: 2px solid red;
+        background-color: #ffd0d0;
+    }
+
+    .btn {
+        margin-top: 20px;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #output {
+        margin-top: 20px;
+        border: 1px solid gray;
+        padding: 10px;
+        height: 100px;
+        overflow-y: auto;
+        background-color: white;
+    }
+
+    a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+</style>
+
+<body>
+    <h1>Events, Event Bubbling, setInterval & setTimeout</h1>
+    <div id="grandparent" style="padding: 20px; border: 2px solid black;">
+        Grandparent
+        <div id="parent" style="padding: 20px; border: 2px solid blue; margin-top: 10px;">
+            Parent
+            <div id="child" style="padding: 20px; border: 2px solid red; margin-top: 10px;">
+                Child
+            </div>
+        </div>
+    </div>
+    <button class="btn" id="startInterval">Start Interval</button>
+    <button class="btn" id="stopInterval">Stop Interval</button>
+    <button class="btn" id="startTimeout">Start Timeout</button>
+    <div id="output" style="margin-top: 20px; border: 1px solid gray; padding: 10px; height: 100px; overflow-y: auto;">
+        Output will appear here...
+    </div>
+
+    <h3>Further Reading</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">MDN:
+                addEventListener</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles">MDN: Event Bubbling</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">MDN:
+                setInterval</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">MDN:
+                setTimeout</a></li>
+        <li><a href="https://javascript.info/event-bubbling">JavaScript.info: Event Bubbling</a></li>
+        <li><a href="https://javascript.info/settimeout-setinterval">JavaScript.info: setTimeout and setInterval</a>
+        </li>
+        <li><a href="https://www.w3schools.com/js/js_timing.asp">W3Schools: JavaScript Timing Events</a></li>
+        <li><a href="https://www.geeksforgeeks.org/javascript-event-bubbling-and-capturing/">GeeksforGeeks: Event
+                Bubbling and Capturing</a></li>
+        <li><a href="https://www.freecodecamp.org/news/javascript-settimeout-how-to-use-it-with-examples/">freeCodeCamp:
+                JavaScript setTimeout</a></li>
+        <li><a href="https://www.freecodecamp.org/news/javascript-setinterval-how-to-use-it-with-examples/">freeCodeCamp:
+                JavaScript setInterval</a></li>
+    </ul>
+
+
+</body>
+<script>
+    // Event Bubbling Example
+    document.getElementById('grandparent').addEventListener('click', function () {
+        alert('Grandparent clicked!');
+    });
+
+    document.getElementById('parent').addEventListener('click', function (event) {
+        alert('Parent clicked!');
+        event.stopPropagation(); // Stop bubbling to grandparent
+    });
+
+    document.getElementById('child').addEventListener('click', function () {
+        alert('Child clicked!');
+    });
+
+    // setInterval and setTimeout Example
+    let intervalId;
+    document.getElementById('startInterval').addEventListener('click', function () {
+        if (!intervalId) {
+            intervalId = setInterval(function () {
+                const outputDiv = document.getElementById('output');
+                outputDiv.innerHTML += 'Interval executed<br>';
+                outputDiv.scrollTop = outputDiv.scrollHeight; // Auto-scroll to bottom
+            }, 1000);
+        }
+    });
+
+    document.getElementById('stopInterval').addEventListener('click', function () {
+        clearInterval(intervalId);
+        intervalId = null;
+    });
+
+    document.getElementById('startTimeout').addEventListener('click', function () {
+        setTimeout(function () {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML += 'Timeout executed after 3 seconds<br>';
+            outputDiv.scrollTop = outputDiv.scrollHeight; // Auto-scroll to bottom
+        }, 3000);
+    });
+
+</script>
+
+</html>

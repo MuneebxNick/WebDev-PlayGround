@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events, Event Bubbling, setInterval & setTimeout</title>
+</head>
+<style>
+    .container {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(94, 95, 95);
+        color: orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1,
+    h2 {
+        /* text-align: center; */
+        color: darkblue;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        padding: 20px;
+        border: 2px solid #363636;
+    }
+
+    input {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 16px;
+
+    }
+
+    input[type="submit"] {
+        background-color: orange;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: darkorange;
+    }
+
+
+    .container2 {
+        width: 60vw;
+        height: 300px;
+        background-color: rgb(103, 145, 145);
+        color: rgb(233, 191, 114);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .childContainer {
+        width: 55vw;
+        height: 200px;
+        background-color: brown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .child {
+        width: 45vw;
+        height: 100px;
+        background-color: beige;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(83, 177, 255);
+    }
+
+    .container3 {
+        width: 60vw;
+        height: 300px;
+        background-color: rgb(194, 156, 32);
+        color: rgb(233, 191, 114);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .childContainer2 {
+        width: 55vw;
+        height: 200px;
+        background-color: rgb(53, 70, 146);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .child2 {
+        width: 45vw;
+        height: 100px;
+        background-color: rgb(255, 198, 198);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(40, 37, 70);
+    }
+</style>
+
+<body>
+    <h1>Events, Event Bubbling, setInterval & setTimeout</h1>
+
+    <div class="container">
+        <div class="box">
+            Hey I am a Box
+        </div>
+    </div>
+    <button id="btn">Clcik Me</button>
+
+    <form action="#">
+        <input type="text" placeholder="Enter your name" />
+        <input type="email" placeholder="Enter your email" />
+        <input type="password" placeholder="Enter your password" />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <div class="container2">
+        <section class="childContainer">
+            <div class="child">
+                Hey I am a Child
+            </div>
+        </section>
+    </div>
+
+    <h2>setTimeout , setInterval , etc</h2>
+
+    <div class="container3">
+        <section class="childContainer2">
+            <div class="child2">
+                Hey I am a Child
+            </div>
+        </section>
+    </div>
+
+</body>
+
+<script>
+    let btn = document.getElementById("btn");
+
+    //----------------------------------------------------------------
+    //                 Event Listeners
+    //                  Mouse Events
+    //----------------------------------------------------------------
+
+    // Clicked Listener
+
+    // btn.addEventListener("click", () => {
+    //     document.querySelector(".container").style.backgroundColor = "skyblue";
+    //     // document.querySelector(".box").style.backgroundColor = "beige";
+    //     document.querySelector(".box").style.color = "green";
+
+    // });
+
+    // Double Clicked Listener
+
+    btn.addEventListener("dblclick", () => {
+        document.querySelector(".container").style.backgroundColor = "skyblue";
+        // document.querySelector(".box").style.backgroundColor = "beige";
+        document.querySelector(".box").style.color = "green";
+        document.querySelector(".box").innerHTML = "You double clicked the button";
+
+    });
+
+    // Mouse Down Listener
+
+    // btn.addEventListener("mousedown", () => {
+    //     document.querySelector(".container").style.backgroundColor = "skyblue";
+    //     // document.querySelector(".box").style.backgroundColor = "beige";
+    //     document.querySelector(".box").style.color = "green";
+    //     document.querySelector(".box").innerHTML = "You pressed the button";
+
+    // });
+
+    // Mouse Up Listener
+
+    // btn.addEventListener("mouseup", () => {
+    //     document.querySelector(".container").style.backgroundColor = "skyblue";
+    //     // document.querySelector(".box").style.backgroundColor = "beige";
+    //     document.querySelector(".box").style.color = "green";
+    //     document.querySelector(".box").innerHTML = "You released the button";
+
+    // });
+
+    // Mouse Over Listener
+
+    // btn.addEventListener("mouseover", () => {
+    //     document.querySelector(".container").style.backgroundColor = "skyblue";
+    //     // document.querySelector(".box").style.backgroundColor = "beige";
+    //     document.querySelector(".box").style.color = "green";
+    //     document.querySelector(".box").innerHTML = "You hovered the button";
+
+    // });
+
+    // Mouse Enter Listener
+
+    // btn.addEventListener("mouseenter", () => {
+    //     document.querySelector(".container").style.backgroundColor = "skyblue";
+    //     // document.querySelector(".box").style.backgroundColor = "beige";
+    //     document.querySelector(".box").style.color = "green";
+    //     document.querySelector(".box").innerHTML = "You entered the button";
+
+    // });
+
+    // Mouse Leave Listener
+
+    // btn.addEventListener("mouseleave", () => {
+    //     document.querySelector(".container").style.backgroundColor = "skyblue";
+    //     // document.querySelector(".box").style.backgroundColor = "beige";
+    //     document.querySelector(".box").style.color = "green";
+    //     document.querySelector(".box").innerHTML = "You left the button";
+
+    // });
+
+    // Mouse Out Listener
+
+    // btn.addEventListener("mouseout", () => {
+    //     document.querySelector(".container").style.backgroundColor = "skyblue";
+    //     // document.querySelector(".box").style.backgroundColor = "beige";
+    //     document.querySelector(".box").style.color = "green";
+    //     document.querySelector(".box").innerHTML = "You moved out of the button";
+
+    // });
+
+    // Context Menu Listener
+
+    // btn.addEventListener("contextmenu", () => {
+    //     document.querySelector(".box").style.backgroundColor = "skyblue";
+    //     alert("Right Click is disabled");
+    //     // document.querySelector(".box").style.backgroundColor = "beige";
+    //     // document.querySelector(".box").style.color = "green";
+    //     // document.querySelector(".box").innerHTML = "You right clicked the button";
+
+    // });
+
+
+    //----------------------------------------------------------------
+    //                 Keyboard Events
+    //----------------------------------------------------------------
+
+    // Key Down Listener
+
+    // document.addEventListener("keydown", (e) => {
+    //     console.log("Key Down");
+    //     console.log(e);
+    //     console.log(e.key);
+    //     console.log(e.code);
+    //     document.querySelector(".box").innerHTML = `You pressed ${e.key} key`;
+    // });
+
+    // Key Up Listener
+
+    // document.addEventListener("keyup", (e) => {
+    //     console.log("Key Up");
+    //     console.log(e);
+    //     console.log(e.key);
+    //     console.log(e.code);
+    //     document.querySelector(".box").innerHTML = `You released ${e.key} key`;
+    // });
+
+    // Key Press Listener
+
+    // document.addEventListener("keypress", (e) => {
+    //     console.log("Key Press");
+    //     console.log(e);
+    //     console.log(e.key);
+    //     console.log(e.code);
+    //     document.querySelector(".box").innerHTML = `You pressed ${e.key} key`;
+    // });
+
+    //----------------------------------------------------------------
+    //                 Forms Events
+    //----------------------------------------------------------------
+
+    let form = document.querySelector("form");
+
+    // Form Submit Listener
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log("Form Submitted");
+        console.log(e);
+        console.log(e.target);
+        console.log(e.target[0].value);
+        console.log(e.target[1].value);
+        console.log(e.target[2].value);
+        document.querySelector(".box").innerHTML = `Form Submitted <br> Name: ${e.target[0].value} <br> Email: ${e.target[1].value} <br> Password: ${e.target[2].value}`;
+        form.reset();
+    });
+
+    // Form Change Listener
+
+    // form.addEventListener("change", (e) => {
+    //     console.log("Form Changed");
+    //     console.log(e);
+    //     console.log(e.target);
+    //     console.log(e.target.value);
+    //     document.querySelector(".box").innerHTML = `You changed the ${e.target.placeholder} field to ${e.target.value}`;
+    // });
+
+    // Form Input Listener
+
+    // form.addEventListener("input", (e) => {
+    //     console.log("Form Input");
+    //     console.log(e);
+    //     console.log(e.target);
+    //     console.log(e.target.value);
+    //     document.querySelector(".box").innerHTML = `You are typing in the ${e.target.placeholder} field: ${e.target.value}`;
+    // });
+
+    // Form Focus Listener
+
+    // form.addEventListener("focusin", (e) => {
+    //     console.log("Form Focus In");
+    //     console.log(e);
+    //     console.log(e.target);
+    //     console.log(e.target.value);
+    //     document.querySelector(".box").innerHTML = `You focused on the ${e.target.placeholder} field`;
+    // });
+
+    // Form Blur Listener
+
+    // form.addEventListener("focusout", (e) => {
+    //     console.log("Form Focus Out");
+    //     console.log(e);
+    //     console.log(e.target);
+    //     console.log(e.target.value);
+    //     document.querySelector(".box").innerHTML = `You blurred out of the ${e.target.placeholder} field`;
+    // });
+
+
+    // Form Reset Listener
+
+    // form.addEventListener("reset", (e) => {
+    //     e.preventDefault();
+    //     console.log("Form Reset");
+    //     console.log(e);
+    //     document.querySelector(".box").innerHTML = `Form Reset`;
+    //     form.reset();
+    // });
+
+    // Form Select Listener
+
+    // form.addEventListener("select", (e) => {
+    //     console.log("Form Select");
+    //     console.log(e);
+    //     console.log(e.target);
+    //     console.log(e.target.value);
+    //     document.querySelector(".box").innerHTML = `You selected text in the ${e.target.placeholder} field`;
+    // });
+
+    // Form Cut Listener
+
+    // form.addEventListener("cut", (e) => {
+    //     console.log("Form Cut");
+    //     console.log(e);
+    //     console.log(e.target);
+    //     console.log(e.target.value);
+    //     document.querySelector(".box").innerHTML = `You cut text from the ${e.target.placeholder} field`;
+    // });
+
+
+    // Form Copy Listener
+
+    // form.addEventListener("copy", (e) => {
+    //     console.log("Form Copy");
+    //     console.log(e);
+    //     console.log(e.target);
+    //     console.log(e.target.value);
+    //     document.querySelector(".box").innerHTML = `You copied text from the ${e.target.placeholder} field`;
+    // });
+
+    // Form Paste Listener
+
+    // form.addEventListener("paste", (e) => {
+    //     console.log("Form Paste");
+    //     console.log(e);
+    //     console.log(e.target);
+    //     console.log(e.target.value);
+    //     document.querySelector(".box").innerHTML = `You pasted text into the ${e.target.placeholder} field`;
+    // });
+
+
+    //----------------------------------------------------------------
+    //                 Event Bubbling
+    //----------------------------------------------------------------
+
+    let container2 = document.querySelector(".container2");
+    let childContainer = document.querySelector(".childContainer");
+    let child = document.querySelector(".child");
+
+    container2.addEventListener("click", () => {
+        console.log("Container Clicked");
+        container2.style.backgroundColor = "purple";
+        alert("You clicked the Main Container");
+        // document.querySelector(".child").style.color = "purple";
+        // document.querySelector(".child").innerHTML = "You clicked the Main Container";
+    });
+
+    childContainer.addEventListener("click", (e) => {
+        console.log("Child Container Clicked");
+        childContainer.style.backgroundColor = "skyblue";
+        alert("You clicked the Child Container");
+        // document.querySelector(".child").style.color = "blue";
+        // document.querySelector(".child").innerHTML = "You clicked the Child Container";
+        e.stopPropagation(); // Stop Event Bubbling
+    });
+
+    child.addEventListener("click", (e) => {
+        console.log("Child Clicked");
+        child.style.backgroundColor = "lightgreen";
+        alert("You clicked the Child Div");
+        // document.querySelector(".child").style.color = "green";
+        // document.querySelector(".child").innerHTML = "You clicked the Child Div";
+        e.stopPropagation(); // Stop Event Bubbling
+    });
+
+
+    //----------------------------------------------------------------
+    //                 setTimeout , setInterval , etc
+    //----------------------------------------------------------------
+
+    let randomColor = () => {
+        let val1 = Math.floor(0 + Math.random() * 256);
+        let val2 = Math.floor(0 + Math.random() * 256);
+        let val3 = Math.floor(0 + Math.random() * 256);
+        let color = `rgb(${val1}, ${val2}, ${val3})`;
+        return color;
+    };
+
+    let container3 = document.querySelector(".container3");
+    let childContainer2 = document.querySelector(".childContainer2");
+    let child2 = document.querySelector(".child2");
+
+    // setTimeout(() => {
+    //     // container3.style.backgroundColor = "purple";
+    //     // child2.style.color = "purple";
+    //     // child2.innerHTML = "You changed the color after 3 seconds";
+    //     container3.style.backgroundColor = randomColor();
+    //     childContainer2.style.backgroundColor = randomColor();
+    //     child2.style.backgroundColor = randomColor();
+    //     child2.style.color = randomColor();
+    // }, 3000);
+
+    // clearTimeout(value); // Stop the setTimeout
+
+    setInterval(() => {
+        // container3.style.backgroundColor = "purple";
+        // child2.style.color = "purple";
+        // child2.innerHTML = "You changed the color after 3 seconds";
+        container3.style.backgroundColor = randomColor();
+        childContainer2.style.backgroundColor = randomColor();
+        child2.style.backgroundColor = randomColor();
+        child2.style.color = randomColor();
+    }, 1000);
+
+    // clearInterval(value); // Stop the setInterval
+
+
+</script>
+
+</html>
