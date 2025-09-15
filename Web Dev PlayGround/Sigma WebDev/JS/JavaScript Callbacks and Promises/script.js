@@ -14,7 +14,6 @@ console.log("Hey I am frosty");
 
 // console.log("End of script");
 
-
 // What is a Callback Function?
 // A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 
@@ -35,8 +34,8 @@ greet("Alice", sayGoodbye); // Passing sayGoodbye as a callback function
 // Another Real Life Example
 console.log("Another Real Life Example");
 
-function getData(DataId, getNextData) {
-
+function getData(DataId, getNextData) 
+{
     setTimeout(() => {
         console.log("Data", DataId);
         if (getNextData) {
@@ -51,6 +50,8 @@ getData(1, () => {
         getData(3);
     })
 })
+
+
 
 // What is a Callback Hell?
 // Callback Hell refers to a situation where multiple nested callback functions are used, leading to code that is difficult to read and maintain. This often occurs in asynchronous programming when each operation depends on the result of the previous one.
