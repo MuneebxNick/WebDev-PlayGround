@@ -34,8 +34,7 @@ greet("Alice", sayGoodbye); // Passing sayGoodbye as a callback function
 // Another Real Life Example
 console.log("Another Real Life Example");
 
-function getData(DataId, getNextData) 
-{
+function getData(DataId, getNextData) {
     setTimeout(() => {
         console.log("Data", DataId);
         if (getNextData) {
