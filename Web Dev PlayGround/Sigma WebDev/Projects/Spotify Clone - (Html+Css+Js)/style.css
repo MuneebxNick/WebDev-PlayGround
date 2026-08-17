@@ -180,12 +180,12 @@ body {
 
 .playBar{
   position: fixed;
-  bottom: 20px;
+  bottom: 15px;
   background: rgb(67, 96, 63);
   width: 70vw;
   padding: 12px;
-  border-radius: 30px;
-  
+  border-radius: 15px;
+  height: 35px;
 }
 
 .songsBtn{
@@ -193,6 +193,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.songsBtn img{
+  cursor: pointer;
 }
 .songLists{
   height: 544px;
@@ -232,4 +236,34 @@ body {
   font-size: 14px;
   width: 60px;
   padding: 12px;
+}
+
+.seakBar{
+  height: 4px;
+  width: 70vw;
+  position: absolute;
+  bottom: 0px;
+  background-color:rgb(255, 255, 255);
+  border-radius: 10px;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.circle{
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 13px;
+  position: relative;
+  bottom: 5px;
+  left: 0%;
+  transition: left 0.5s;
+}
+
+.aboveBar{
+  /* width: 50vw; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
 }
