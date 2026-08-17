@@ -1,106 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify - Web Player: Music for everyone</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utilities.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utilities.css" />
+  </head>
+
+  <body>
     <div class="container flex bg-black">
-        <div class="left">
-            <div class="home bg-grey rounded m-1 p-1">
-                <div class="logo">
-                    <img class="invert" src="./img/logo.svg" alt="logo">
-                </div>
-                <ul>
-                    <li>
-                        <img class="invert" src="./img/home.svg" alt="home" srcset="">Home
-                    </li>
-                    <li>
-                        <img class="invert" src="./img/search.svg" alt="search">Search
-                    </li>
-                </ul>
-            </div>
-            <div class="library bg-grey rounded m-1 p-1">
-                <div class="heading">
-                    <img class="invert" src="./img/playlist.svg" alt="">
-                    <h2>Yours Library</h2>
-                </div>
-                <div class="songLists">
-                    <ul>
-                        <li>
-                            <img class="invert" src="./img/music.svg" alt="">
-                            <div class="info">
-                                <div>Song Name</div>
-                                <div>Song Artist</div>
-                            </div>
-                            <div class="playNow">
-                                <span>Play Now</span>
-                                <img class="invert" src="./img/play.svg" alt="">
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer">
-                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
-                  </div>
-            </div>
+      <div class="left">
+        <div class="home bg-grey rounded m-1 p-1">
+          <div class="logo">
+            <img class="invert" src="./img/logo.svg" alt="logo" />
+          </div>
+          <ul>
+            <li>
+              <img
+                class="invert"
+                src="./img/home.svg"
+                alt="home"
+                srcset=""
+              />Home
+            </li>
+            <li>
+              <img class="invert" src="./img/search.svg" alt="search" />Search
+            </li>
+          </ul>
         </div>
-        <div class="right bg-grey rounded ">
-            <div class="header">
-                <div class="nav">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
-                        stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
-                        stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+        <div class="library bg-grey rounded m-1 p-1">
+          <div class="heading">
+            <img class="invert" src="./img/playlist.svg" alt="" />
+            <h2>Yours Library</h2>
+          </div>
+          <div class="songLists">
+            <ul>
+              <li>
+                <img class="invert" src="./img/music.svg" alt="" />
+                <div class="info">
+                  <div>Song Name</div>
+                  <div>Song Artist</div>
                 </div>
-                <div class="buttons">
-                    <button class="signupbtn">Signup</button>
-                    <button class="loginbtn">Login</button>
+                <div class="playNow">
+                  <span>Play Now</span>
+                  <img class="invert" src="./img/play.svg" alt="" />
                 </div>
+              </li>
+            </ul>
+          </div>
+          <div class="footer">
+            <div>
+              <a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a>
             </div>
-            <div class="spotify-playlist">
-                <h1>Spotify Playlist</h1>
-                <div class="cardContainer">
-                    <div class="card">
-                        <div class="play">
-                            <svg xmlns="https://www.w3.ord/200/svg" data-encore-id="icon" role="img" aria-hidden="true" class="e-10750-icon" viewBox="0 0 24 24" style="--encore-icon-height: var(--encore-graphic-size-decorative-base); --encore-icon-width: var(--encore-graphic-size-decorative-base);"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"></path></svg>
-                        </div>
-                        <img src="./img/cover.jpg" alt="">
-                        <h2>Happy Hits!</h2>
-                        <p>Hits to boost your mood and fill you with happiness!</p>
-                    </div>
-                    <div class="card">
-                        <img src="./img/cover.jpg" alt="">
-                        <h2>Happy Hits!</h2>
-                        <p>Hits to boost your mood and fill you with happiness!</p>
-                    </div>
-                </div>
-                <div class="playBar">
-                    <div class="songInfo"></div>
-                    <div class="songsBtn">
-                        <img src="./img/prevsong.svg" alt="Previous Song">
-                        <img src="./img/play.svg" alt="Play Song">
-                        <img src="./img/nextsong.svg" alt="Next Song">
-                    </div>
-                    <div class="songTime"></div>
-                </div>
+            <div>
+              <a href="https://www.spotify.com/jp/privacy/"
+                ><span>Privacy Center</span></a
+              >
             </div>
+            <div>
+              <a href="https://www.spotify.com/jp/legal/privacy-policy/"
+                ><span>Privacy Policy</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/legal/cookies-policy/"
+                ><span>Cookies</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"
+                ><span>About Ads</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/accessibility/"
+                ><span>Accessibility</span></a
+              >
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="right bg-grey rounded">
+        <div class="header">
+          <div class="nav">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="buttons">
+            <button class="signupbtn">Signup</button>
+            <button class="loginbtn">Login</button>
+          </div>
+        </div>
+        <div class="spotify-playlist">
+          <h1>Spotify Playlist</h1>
+          <div class="cardContainer">
+            <div class="card">
+              <div class="play">
+                <svg
+                  xmlns="https://www.w3.ord/200/svg"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  class="e-10750-icon"
+                  viewBox="0 0 24 24"
+                  style="
+                    --encore-icon-height: var(
+                      --encore-graphic-size-decorative-base
+                    );
+                    --encore-icon-width: var(
+                      --encore-graphic-size-decorative-base
+                    );
+                  "
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                  ></path>
+                </svg>
+              </div>
+              <img src="./img/cover.jpg" alt="" />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+            <div class="card">
+              <div class="play">
+                <svg
+                  xmlns="https://www.w3.ord/200/svg"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  class="e-10750-icon"
+                  viewBox="0 0 24 24"
+                  style="
+                    --encore-icon-height: var(
+                      --encore-graphic-size-decorative-base
+                    );
+                    --encore-icon-width: var(
+                      --encore-graphic-size-decorative-base
+                    );
+                  "
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                  ></path>
+                </svg>
+              </div>
+              <img src="./img/cover.jpg" alt="" />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+          </div>
+          <div class="playBar">
+            <div class="seakBar">
+              <div class="circle"></div>
+            </div>
+            <div class="aboveBar">
+              <div class="songInfo"></div>
+              <div class="songsBtn">
+                <img
+                  id="previous"
+                  src="./img/prevsong.svg"
+                  alt="Previous Song"
+                />
+                <img id="play" src="./img/play.svg" alt="Play Song" />
+                <img id="next" src="./img/nextsong.svg" alt="Next Song" />
+              </div>
+              <div class="songTime"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-<script src="app.js"></script>
+  </body>
+  <script src="app.js"></script>
 </html>
