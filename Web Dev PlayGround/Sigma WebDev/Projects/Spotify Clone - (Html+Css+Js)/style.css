@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-:root{
-  --a:0;
+:root {
+  --a: 0;
 }
 
 * {
@@ -89,6 +89,10 @@ body {
   padding: 16px;
 }
 
+.spotify-playlist h1{
+  padding: 10px;
+}
+
 .cardContainer {
   display: flex;
   gap: 10px;
@@ -96,6 +100,10 @@ body {
   margin: 20px;
   overflow-y: auto;
   max-height: 60vh;
+}
+
+.left .close {
+  display: none;
 }
 
 .card {
@@ -138,11 +146,11 @@ body {
   transition: all 1s ease;
 }
 
-.play:hover{
+.play:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
-.buttons>* {
+.buttons > * {
   margin: 0 10px;
 }
 
@@ -159,7 +167,7 @@ body {
 
 .signupbtn:hover {
   font-size: 15px;
-  color: white
+  color: white;
 }
 
 .loginbtn {
@@ -177,41 +185,50 @@ body {
   font-weight: bold;
   font-size: 17px;
 }
+.hamburger {
+  display: none;
+}
 
-.playBar{
+.hamburgerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+.playBar {
   position: fixed;
   bottom: 15px;
   background: rgb(67, 96, 63);
   width: 70vw;
   padding: 12px;
   border-radius: 15px;
-  height: 35px;
+  min-height: 35px;
 }
 
-.songsBtn{
+.songsBtn {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
 
-.songsBtn img{
+.songsBtn img {
   cursor: pointer;
 }
-.songLists{
+.songLists {
   height: 544px;
   overflow: auto;
   margin: 44px 0;
 }
 
-.info{
+.info {
   font-size: 12px;
 }
-.songLists ul{
+.songLists ul {
   padding: 0 12px;
 }
 
-.songLists ul li{
+.songLists ul li {
   list-style: decimal;
   display: flex;
   align-items: center;
@@ -223,33 +240,32 @@ body {
   margin-bottom: 12px;
   border-radius: 5px;
   font-size: 14px;
-  
 }
 
-.playNow{
+.playNow {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.playNow span{
+.playNow span {
   font-size: 14px;
   width: 60px;
   padding: 12px;
 }
 
-.seakBar{
+.seakBar {
   height: 4px;
   width: 70vw;
   position: absolute;
   bottom: 0px;
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   margin: 3px;
   cursor: pointer;
 }
 
-.circle{
+.circle {
   width: 12px;
   height: 12px;
   background-color: white;
@@ -260,10 +276,63 @@ body {
   transition: left 0.5s;
 }
 
-.aboveBar{
+.aboveBar {
   /* width: 50vw; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: white;
+  margin: 20px 0;
+}
+
+@media (max-width: 1400px) {
+  .left {
+    position: absolute;
+    left: -150%;
+    z-index: 1;
+    transition: all 0.3s;
+    width: 375px;
+    height: 70vh;
+    background-color: black;
+  }
+
+  .left .close {
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    width: 45px;
+    height: 40px;
+    display: block;
+  }
+
+  .right {
+    width: 100vw;
+    margin: 0;
+  }
+
+  .playBar {
+    width: calc(100vw - 60px);
+  }
+
+  .seakBar {
+    width: calc(100vw - 70px);
+  }
+
+  .aboveBar{
+    flex-direction: column;
+    gap: 13px;
+    align-items: center;
+  }
+
+  .card{
+    width: 90vw;
+  }
+  .cardContainer{
+    margin: 0;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
