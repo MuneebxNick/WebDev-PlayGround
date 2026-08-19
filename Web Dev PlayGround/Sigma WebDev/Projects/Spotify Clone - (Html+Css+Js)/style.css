@@ -19,6 +19,7 @@ body {
   width: 25vw;
   padding: 10px;
 }
+
 .right {
   width: 75vw;
   position: relative;
@@ -81,7 +82,7 @@ body {
   background-color: rgb(27, 27, 27);
 }
 
-.header > * {
+.header>* {
   padding: 20px;
 }
 
@@ -89,7 +90,7 @@ body {
   padding: 16px;
 }
 
-.spotify-playlist h1{
+.spotify-playlist h1 {
   padding: 10px;
 }
 
@@ -121,7 +122,7 @@ body {
   --a: 1;
 }
 
-.card > * {
+.card>* {
   padding-top: 10px;
 }
 
@@ -150,7 +151,8 @@ body {
   transform: scale(1.2);
   cursor: pointer;
 }
-.buttons > * {
+
+.buttons>* {
   margin: 0 10px;
 }
 
@@ -185,6 +187,7 @@ body {
   font-weight: bold;
   font-size: 17px;
 }
+
 .hamburger {
   display: none;
 }
@@ -195,6 +198,7 @@ body {
   align-items: center;
   gap: 13px;
 }
+
 .playBar {
   position: fixed;
   bottom: 15px;
@@ -215,6 +219,7 @@ body {
 .songsBtn img {
   cursor: pointer;
 }
+
 .songLists {
   height: 544px;
   overflow: auto;
@@ -224,6 +229,7 @@ body {
 .info {
   font-size: 12px;
 }
+
 .songLists ul {
   padding: 0 12px;
 }
@@ -285,7 +291,21 @@ body {
   margin: 20px 0;
 }
 
-@media (max-width: 1400px) {
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.volt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
   .left {
     position: absolute;
     left: -150%;
@@ -294,6 +314,7 @@ body {
     width: 375px;
     height: 70vh;
     background-color: black;
+    padding: 0;
   }
 
   .left .close {
@@ -314,25 +335,45 @@ body {
     width: calc(100vw - 60px);
   }
 
+  .songInfo,
+  .songTime {
+    width: auto;
+  }
+
   .seakBar {
     width: calc(100vw - 70px);
   }
 
-  .aboveBar{
+  .aboveBar {
     flex-direction: column;
     gap: 13px;
     align-items: center;
   }
 
-  .card{
-    width: 90vw;
+  .card {
+    width: 44vw;
   }
-  .cardContainer{
+
+  .cardContainer {
     margin: 0;
     justify-content: center;
   }
 
   .hamburger {
     display: block;
+  }
+
+  .volt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 88vw;
   }
 }
